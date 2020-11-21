@@ -1,15 +1,17 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
+import React from "react";
+import PropTypes from "prop-types";
+import Helmet from "react-helmet";
+import Link from "gatsby-link";
 
-import '../style/index.scss'
+import "../style/index.scss";
+import Navbar from "../components/Navbar";
 
 const Layout = ({ children, site }) => (
   <div>
     <Helmet title="Snipcart + DatoCMS + GatsbyJS Example" />
     <div className="Container">
-      <div className="Header">
+      <Navbar />
+      {/* <div className="Header">
         <div className="Wrap" >
           <div className="Header__body">
             <h1 className="Header__title">
@@ -30,23 +32,22 @@ const Layout = ({ children, site }) => (
             </div>
           </div>
         </div>
-      </div>
-      <div className="Wrap" >
-        {children}
-      </div>
-      <div className="Wrap" >
+      </div> */}
+      <div className="Wrap">{children}</div>
+      <div className="Wrap">
         <div className="Footer">
-          This website is just an example project to demonstrate how you can 
-          integrate <a href="https://www.gatsbyjs.org/">Gatsby</a>, <a href="https://snipcart.com/">Snipcart</a> and <a href="https://www.datocms.com">DatoCMS</a>.
+          This website is just an example project to demonstrate how you can integrate{" "}
+          <a href="https://www.gatsbyjs.org/">Gatsby</a>,{" "}
+          <a href="https://snipcart.com/">Snipcart</a> and{" "}
+          <a href="https://www.datocms.com">DatoCMS</a>.
         </div>
       </div>
     </div>
   </div>
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.func,
-}
+};
 
-export default Layout
-
+export default Layout;
