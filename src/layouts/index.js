@@ -11,29 +11,7 @@ const Layout = ({ children, site }) => (
     <Helmet title="Snipcart + DatoCMS + GatsbyJS Example" />
     <div className="Container">
       <Navbar />
-      {/* <div className="Header">
-        <div className="Wrap" >
-          <div className="Header__body">
-            <h1 className="Header__title">
-              <Link data-text={site.siteMetadata.siteName} to="/">
-                {site.siteMetadata.siteName}
-              </Link>
-            </h1>
-            <div className="Header__summary snipcart-summary snipcart-checkout">
-              <div className="Header__summary__title">
-                🛍 MY CART 🛍
-              </div>
-              <div className="Header__summary__line">
-                Number of items: <span className="snipcart-total-items"></span>
-              </div>
-              <div className="Header__summary__line">
-                Total price: <span className="snipcart-total-price"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-      <div>{children}</div>
+      {children}
     </div>
   </div>
 );
