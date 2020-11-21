@@ -24,7 +24,7 @@ const Navbar = () => {
       </div>
       <ul>
         <li>
-          <Link to="/products">Presets</Link>
+          <Link to="/presets">Presets</Link>
         </li>
         <li>
           <Link to="/help">Help</Link>
