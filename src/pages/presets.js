@@ -13,6 +13,7 @@ export default function Presets() {
             id
             name
             price
+            originalId
             image {
               url
               sizes(maxWidth: 300, imgixParams: { fm: "jpg" }) {
@@ -29,7 +30,7 @@ export default function Presets() {
       }
     }
   `);
-  console.log(data.site.siteMetadata.siteName);
+  console.log(data.allDatoCmsProduct.edges);
   return (
     <Layout>
       <div className="Catalogue">
@@ -37,7 +38,7 @@ export default function Presets() {
           <div className="Catalogue__item" key={product.id}>
             <div className="Product">
               <div className="Product__image">
-                <Link to={`/presets/${product.id}`}>
+                <Link to={`/presets/${product.originalId}`}>
                   <Img sizes={product.image.sizes} />
                 </Link>
               </div>
