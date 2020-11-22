@@ -34,8 +34,10 @@ const Navbar = () => {
         </li>
         <li>
           <span className="snipcart-checkout" style={{ cursor: "pointer" }}>
-            <FaShoppingBag />
+            <FaShoppingBag size="20" />
           </span>
+          <span className="snipcart-items-count"></span>
+          <span className="snipcart-total-price"></span>
         </li>
       </ul>
     </nav>

@@ -7,6 +7,21 @@ import styled from "@emotion/styled";
 export default function Home({ className }) {
   const data = useStaticQuery(graphql`
     query {
+      allDatoCmsHomePage {
+        edges {
+          node {
+            title
+            homeText {
+              body1
+              body2
+              body3
+              body4
+              body5
+              body6
+            }
+          }
+        }
+      }
       desktop: file(relativePath: { eq: "cc1.JPG" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 1920) {
@@ -32,9 +47,22 @@ export default function Home({ className }) {
     text-transform: uppercase;
   `;
 
+  const HomeParagraphSpacing = styled.div`
+    padding: 5%;
+    font-size: 20px;
+    color: #333333;
+    width: 75%;
+    p {
+      margin: 20px 0;
+    }
+  `;
+
   const imageData = data.desktop.childImageSharp.fluid;
+  const homePageData = data.allDatoCmsHomePage.edges[0].node;
+  const homePageText = homePageData.homeText;
+  console.log(homePageText);
   return (
-    <Layout site={data.site}>
+    <Layout>
       <BackgroundImage
         Tag="section"
         fluid={imageData}
@@ -44,7 +72,15 @@ export default function Home({ className }) {
       >
         <HomeImageText>Charis Cheung Presets</HomeImageText>
       </BackgroundImage>
-      <h2 className="Home-Image-Text">jhdjkas</h2>
+      <HomeParagraphSpacing>
+        <h2>{homePageData.title}</h2>
+        <p>{homePageText[0].body1}</p>
+        <p>{homePageText[0].body2}</p>
+        <p>{homePageText[0].body3}</p>
+        <p>{homePageText[0].body4}</p>
+        <p>{homePageText[0].body5}</p>
+        <p>{homePageText[0].body6}</p>
+      </HomeParagraphSpacing>
     </Layout>
   );
 }
