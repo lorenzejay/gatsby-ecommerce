@@ -1,6 +1,7 @@
 import { Link } from "gatsby";
 import React from "react";
 import "./styles.scss";
+import ReactCompareImage from "react-compare-image";
 
 const PresetCard = ({ image, title, price, link, id, description, sku, isDesktop }) => {
   console.log(isDesktop);
@@ -10,27 +11,28 @@ const PresetCard = ({ image, title, price, link, id, description, sku, isDesktop
         <img src={image} alt={title} />
       </Link>
       <div className="card-container">
-        <h4>
+        <h3>
           {title}
           <span> ({isDesktop ? "Desktop" : "Mobile"})</span>
-        </h4>
+        </h3>
 
-        <div className="card-price-addcart">
-          <p>${parseInt(price)}</p>
+        <p>{description}</p>
+      </div>
+      <div className="card-price-addcart">
+        <p>${parseInt(price)}</p>
 
-          <button
-            className="snipcart-add-item"
-            data-item-id={id}
-            data-item-price={Number(price)}
-            data-item-url={link}
-            data-item-description={description}
-            data-item-name={title}
-            data-item-image={image}
-            data-item-file-guid={sku}
-          >
-            Add to cart
-          </button>
-        </div>
+        <button
+          className="snipcart-add-item"
+          data-item-id={id}
+          data-item-price={Number(price)}
+          data-item-url={link}
+          data-item-description={description}
+          data-item-name={title}
+          data-item-image={image}
+          data-item-file-guid={sku}
+        >
+          <p>Add to cart</p>
+        </button>
       </div>
     </div>
   );

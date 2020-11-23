@@ -5,7 +5,7 @@ nav {
   padding: 0 5%;
   background-color: white;
   height: 10vh;
-  border-bottom: 1.3px solid #333333;
+
   a {
     text-decoration: none;
   }
@@ -24,7 +24,7 @@ nav {
       a {
         color: #333333;
         font-size: 20px;
-        &:focus {
+        &:active {
           text-decoration: underline;
         }
       }

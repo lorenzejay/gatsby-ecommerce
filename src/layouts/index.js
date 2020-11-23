@@ -5,6 +5,7 @@ import Link from "gatsby-link";
 
 import "../style/index.scss";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Layout = ({ children, site }) => (
   <div>
@@ -12,6 +13,7 @@ const Layout = ({ children, site }) => (
     <div className="Container">
       <Navbar />
       {children}
+      <Footer />
     </div>
   </div>
 );

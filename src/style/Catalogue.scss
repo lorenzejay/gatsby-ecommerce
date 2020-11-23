@@ -1,5 +1,6 @@
 .Catalogue {
-  margin: 16vh 0;
+  background-color: #edece8;
+  height: 100vh;
 }
 
 .Catalogue__item {
@@ -20,7 +21,7 @@
 
 @media screen and (min-width: 900px) {
   .Catalogue {
-    padding: 0 5%;
+    padding: 5%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }

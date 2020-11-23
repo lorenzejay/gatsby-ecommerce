@@ -18,8 +18,9 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`),
       },
     },
-    `gatsby-transformer-sharp`,
+
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-datocms`,
       options: { apiToken: process.env.DATO_API_TOKEN },
@@ -37,6 +38,7 @@ module.exports = {
         fonts: [
           `limelight`,
           `Poppins\:300,400,400i,700`, // you can also specify font weights and styles
+          "Vollkorn",
         ],
         display: "swap",
       },

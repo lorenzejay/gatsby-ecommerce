@@ -1,7 +1,7 @@
 import { Link, graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import "./styles.scss";
-import { FaShoppingBag } from "react-icons/fa";
+import { BiShoppingBag } from "react-icons/bi";
 
 const Navbar = () => {
   const data = useStaticQuery(graphql`
@@ -34,10 +34,9 @@ const Navbar = () => {
         </li>
         <li>
           <span className="snipcart-checkout" style={{ cursor: "pointer" }}>
-            <FaShoppingBag size="20" />
+            <BiShoppingBag size="20" />
           </span>
           <span className="snipcart-items-count"></span>
-          <span className="snipcart-total-price"></span>
         </li>
       </ul>
     </nav>

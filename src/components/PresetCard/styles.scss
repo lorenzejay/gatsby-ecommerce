@@ -1,39 +1,53 @@
 .card {
+  background-color: #fff;
   border-radius: 5px;
-  width: 23vw;
-  height: 60vh;
+  width: 25vw;
+  height: 65vh;
   margin: 5%;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
+  transition: 0.5s ease-in;
+  // &:hover {
+  //   transform: scale(1.12);
+  // }
+
   img {
     object-fit: cover;
     width: 100%;
     height: 60%;
-    border-top-right-radius: inherit;
-    border-top-left-radius: inherit;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
   }
   .card-container {
-    h4,
+    height: 12vh;
+    padding: 1% 4%;
+    margin-bottom: 5vh;
+    h3,
     p {
-      padding: 5% 0;
+      margin: 2% 5%;
     }
 
     h4 {
       text-transform: uppercase;
     }
-    .card-price-addcart {
-      display: flex;
-      justify-content: space-between;
-      padding-right: 10px;
-    }
+  }
+  .card-price-addcart {
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    justify-content: space-between;
+    padding-right: 10px;
     button {
+      text-transform: uppercase;
       display: grid;
-      padding: 5px;
+      padding: 5px 15px;
       margin: auto 0;
       font-size: 16px;
-      background-color: #00c6e9;
-      color: white;
-      border: none;
+      background-color: #fff;
+      border-radius: 15px;
+      color: black;
+      border: #ffb6c1 2px solid;
       outline: none;
-      padding: 5px;
+      cursor: pointer;
     }
   }
 }

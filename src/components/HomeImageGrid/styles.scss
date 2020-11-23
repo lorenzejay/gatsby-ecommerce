@@ -1,0 +1,19 @@
+.HomeImageGrid-Container {
+  width: 100vw;
+  padding: 0 5%;
+  margin: 5vh 0;
+  h1 {
+    font-size: 2rem;
+  }
+  .HomeImageGrid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5vw;
+    img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+    }
+  }
+}

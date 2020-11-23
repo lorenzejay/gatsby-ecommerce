@@ -1,15 +1,20 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Layout from "../layouts/index";
-import Img from "gatsby-image";
+import { HomeImageText } from "../style/MainBackground";
 import BackgroundImage from "gatsby-background-image";
 import styled from "@emotion/styled";
+import HomePagePresetCards from "../components/HomePagePresetCards/index";
+import HomeImageGrid from "../components/HomeImageGrid/index";
 export default function Home({ className }) {
   const data = useStaticQuery(graphql`
     query {
       allDatoCmsHomePage {
         edges {
           node {
+            homeScreenGallery {
+              url
+            }
             title
             homeText {
               body1
@@ -32,19 +37,14 @@ export default function Home({ className }) {
     }
   `);
 
-  const HomePresetImage = styled(BackgroundImage)`
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  `;
-  const HomeImageText = styled.h2`
-    height: 100%;
+  const HomePagePresetCardsContainer = styled.div`
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 2.2rem;
-    color: white;
-    text-transform: uppercase;
+    justify-content: space-around
+    gap: 5vw
+    width: 100vw
+    height: 35vh
+    padding: 0 5%;
   `;
 
   const HomeParagraphSpacing = styled.div`
@@ -52,6 +52,7 @@ export default function Home({ className }) {
     font-size: 20px;
     color: #333333;
     width: 75%;
+
     p {
       margin: 20px 0;
     }
@@ -60,7 +61,7 @@ export default function Home({ className }) {
   const imageData = data.desktop.childImageSharp.fluid;
   const homePageData = data.allDatoCmsHomePage.edges[0].node;
   const homePageText = homePageData.homeText;
-  console.log(homePageText);
+  console.log(data.allDatoCmsHomePage.edges[0].node.homeScreenGallery);
   return (
     <Layout>
       <BackgroundImage
@@ -68,7 +69,7 @@ export default function Home({ className }) {
         fluid={imageData}
         className={className}
         backgroundColor={`#040e18`}
-        style={{ width: "100%", height: 400 }}
+        style={{ width: "100%", height: 300, backgroundSize: "cover" }}
       >
         <HomeImageText>Charis Cheung Presets</HomeImageText>
       </BackgroundImage>
@@ -81,6 +82,14 @@ export default function Home({ className }) {
         <p>{homePageText[0].body5}</p>
         <p>{homePageText[0].body6}</p>
       </HomeParagraphSpacing>
+
+      <HomePagePresetCardsContainer>
+        <HomeImageGrid>
+          {data.allDatoCmsHomePage.edges[0].node.homeScreenGallery.map((item, i) => (
+            <img src={item.url} alt={"Grid image from charis cheung portfolio"} key={i} />
+          ))}
+        </HomeImageGrid>
+      </HomePagePresetCardsContainer>
     </Layout>
   );
 }

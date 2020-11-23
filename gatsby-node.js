@@ -6,7 +6,7 @@
 
 // // You can delete this file if you're not using it
 // const path = require(`path`);
-// exports.createPages = async ({ graphql, actions }) => {
+// exports.createPages = async ({ actions, graphql }) => {
 //   const { createPage } = actions;
 //   // Query for all products in Shopify
 //   const result = await graphql(`
@@ -18,6 +18,7 @@
 //             name
 //             price
 //             originalId
+//             description
 //             imageGallery {
 //              url
 //             }
@@ -31,12 +32,12 @@
 //         }
 //       }
 //   `);
+//   console.log(result);
 //   // Iterate over all products and create a new page using a template
-//   // The product "handle" is generated automatically by Shopify
-//   result.data.allDatoCmsProduct.edges.forEach(({ node }) => {
+//   result.allDatoCmsProduct.edges.forEach(({ node }) => {
 //     console.log(node);
 //     createPage({
-//       path: `/presets/${node.originalId}`,
+//       path: `/presets/${node.slug}`,
 //       component: path.resolve(`./src/templates/preset.js`),
 //       context: {
 //         product: node,
