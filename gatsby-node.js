@@ -1,47 +1,41 @@
-// /**
-//  * Implement Gatsby's Node APIs in this file.
-//  *
-//  * See: https://www.gatsbyjs.org/docs/node-apis/
-//  */
+const path = require(`path`);
 
-// // You can delete this file if you're not using it
-// const path = require(`path`);
-// exports.createPages = async ({ actions, graphql }) => {
-//   const { createPage } = actions;
-//   // Query for all products in Shopify
-//   const result = await graphql(`
-//     query {
-//       allDatoCmsProduct {
-//         edges {
-//           node {
-//             id
-//             name
-//             price
-//             originalId
-//             description
-//             imageGallery {
-//              url
-//             }
-//             image {
-//               url
-//               sizes(maxWidth: 300, imgixParams: { fm: "jpg" }) {
-//                 ...GatsbyDatoCmsSizes
-//               }
-//             }
-//           }
-//         }
-//       }
-//   `);
-//   console.log(result);
-//   // Iterate over all products and create a new page using a template
-//   result.allDatoCmsProduct.edges.forEach(({ node }) => {
-//     console.log(node);
-//     createPage({
-//       path: `/presets/${node.slug}`,
-//       component: path.resolve(`./src/templates/preset.js`),
-//       context: {
-//         product: node,
-//       },
-//     });
-//   });
-// };
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions;
+  return graphql(`
+    {
+      allDatoCmsProduct {
+        edges {
+          node {
+            id
+            name
+            price
+            description
+            slug
+            beforeAndAfter {
+              url
+            }
+            beforeAndAfter2 {
+              url
+            }
+            image {
+              url
+            }
+          }
+        }
+      }
+    }
+  `).then((result) => {
+    result.data.allDatoCmsProduct.edges.forEach(({ node }) => {
+      createPage({
+        path: `/presets/${node.slug}/`,
+        component: path.resolve(`./src/templates/Preset/index.js`),
+        context: {
+          // Data passed to context is available
+          // in page queries as GraphQL variables.
+          preset: node,
+        },
+      });
+    });
+  });
+};

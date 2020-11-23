@@ -17,6 +17,9 @@ export default function Presets({ className }) {
             description
             slug
             isDesktopPreset
+            beforeAndAfter {
+              url
+            }
             image {
               url
               sizes(maxWidth: 300, imgixParams: { fm: "jpg" }) {

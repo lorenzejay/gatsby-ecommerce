@@ -7,7 +7,7 @@ import "../style/index.scss";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-const Layout = ({ children, site }) => (
+const Layout = ({ children }) => (
   <div>
     <Helmet title="Snipcart + DatoCMS + GatsbyJS Example" />
     <div className="Container">

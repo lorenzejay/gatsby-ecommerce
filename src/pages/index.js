@@ -4,7 +4,6 @@ import Layout from "../layouts/index";
 import { HomeImageText } from "../style/MainBackground";
 import BackgroundImage from "gatsby-background-image";
 import styled from "@emotion/styled";
-import HomePagePresetCards from "../components/HomePagePresetCards/index";
 import HomeImageGrid from "../components/HomeImageGrid/index";
 export default function Home({ className }) {
   const data = useStaticQuery(graphql`
@@ -61,7 +60,7 @@ export default function Home({ className }) {
   const imageData = data.desktop.childImageSharp.fluid;
   const homePageData = data.allDatoCmsHomePage.edges[0].node;
   const homePageText = homePageData.homeText;
-  console.log(data.allDatoCmsHomePage.edges[0].node.homeScreenGallery);
+
   return (
     <Layout>
       <BackgroundImage
@@ -86,7 +85,7 @@ export default function Home({ className }) {
       <HomePagePresetCardsContainer>
         <HomeImageGrid>
           {data.allDatoCmsHomePage.edges[0].node.homeScreenGallery.map((item, i) => (
-            <img src={item.url} alt={"Grid image from charis cheung portfolio"} key={i} />
+            <img src={item.url} alt={"Examples from Charis Cheung portfolio"} key={i} />
           ))}
         </HomeImageGrid>
       </HomePagePresetCardsContainer>

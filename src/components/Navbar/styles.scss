@@ -1,4 +1,4 @@
-nav {
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,13 +14,14 @@ nav {
     font-size: 30px;
     text-transform: uppercase;
   }
-  ul {
+  .navbar-links {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 30%;
     li {
       list-style-type: none;
+      align-self: center;
       a {
         color: #333333;
         font-size: 20px;

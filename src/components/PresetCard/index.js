@@ -6,11 +6,11 @@ import ReactCompareImage from "react-compare-image";
 const PresetCard = ({ image, title, price, link, id, description, sku, isDesktop }) => {
   console.log(isDesktop);
   return (
-    <div className="card">
+    <div className="preset-card">
       <Link to={link}>
         <img src={image} alt={title} />
       </Link>
-      <div className="card-container">
+      <div className="preset-card-container">
         <h3>
           {title}
           <span> ({isDesktop ? "Desktop" : "Mobile"})</span>
@@ -18,7 +18,7 @@ const PresetCard = ({ image, title, price, link, id, description, sku, isDesktop
 
         <p>{description}</p>
       </div>
-      <div className="card-price-addcart">
+      <div className="preset-card-price-addcart">
         <p>${parseInt(price)}</p>
 
         <button

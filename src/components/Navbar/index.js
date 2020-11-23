@@ -16,13 +16,13 @@ const Navbar = () => {
   `);
   console.log(data);
   return (
-    <nav>
+    <nav className="navbar">
       <div>
         <Link className="logo" to="/">
           {data.site.siteMetadata.siteName}
         </Link>
       </div>
-      <ul>
+      <ul className="navbar-links">
         <li>
           <Link to="/presets">Presets</Link>
         </li>
