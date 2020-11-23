@@ -11,8 +11,8 @@ const ProductTemplate = ({ pageContext }) => {
   console.log(preset);
   const beforeAfter1 = preset.beforeAndAfter[0].url;
   const beforeAfter2 = preset.beforeAndAfter[1].url;
-  const beforeAfter3 = preset.beforeAndAfter2[0].url;
-  const beforeAfter4 = preset.beforeAndAfter2[1].url;
+  const beforeAfter3 = preset.beforeAndAfter && preset.beforeAndAfter2[0].url;
+  const beforeAfter4 = preset.beforeAndAfter && preset.beforeAndAfter2[1].url;
   return (
     <Layout>
       <div className="preset-container">

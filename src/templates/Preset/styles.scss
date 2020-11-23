@@ -2,17 +2,25 @@
   min-height: 100vh;
   padding: 5%;
   background-color: #f1f1f1;
-
+  a {
+    color: #ffb6c1;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
   .preset-split {
     display: flex;
+    align-items: center;
     gap: 10vw;
-    height: 100vh;
+    padding: 0;
+    height: 80vh;
     .preset-display-container {
       display: flex;
       flex-direction: column;
       width: 50vw;
       .preset-description {
         margin-top: 8vh;
+        font-size: 1.2rem;
       }
     }
     .carousel,
@@ -41,28 +49,27 @@
       flex-direction: column;
       box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
       width: 30vw;
-      min-height: 30vh;
-      max-height: 150px;
+      height: 20vh;
       padding: 2%;
       background-color: white;
       h2 {
         text-align: center;
       }
       button {
-        margin-top: 12vh;
-        padding: 5px 15px;
+        padding: 0 15px;
         background-color: #fff;
         border-radius: 15px;
         color: black;
         border: #ffb6c1 2px solid;
         outline: none;
-        height: 6vh;
+        height: 5vh;
+
         cursor: pointer;
         &:hover {
           background-color: #ffb6c1;
         }
         p {
-          font-size: 16px;
+          font-size: 22px;
           text-transform: uppercase;
         }
       }
