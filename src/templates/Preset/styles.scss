@@ -1,5 +1,5 @@
 .preset-container {
-  min-height: 100vh;
+  min-height: 110vh;
   padding: 5%;
   background-color: #f1f1f1;
   a {
@@ -10,7 +10,6 @@
   }
   .preset-split {
     display: flex;
-    align-items: center;
     gap: 10vw;
     padding: 0;
     height: 80vh;
@@ -46,6 +45,7 @@
 
     .preset-purchase-container {
       display: flex;
+      margin-top: 10vh;
       flex-direction: column;
       box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
       width: 30vw;
