@@ -2,12 +2,17 @@ import React from "react";
 import "./styles.scss";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import Img from "gatsby-image";
-import { GrContactInfo } from "react-icons/gr";
-import { FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
     query {
+      allDatoCmsHomePage {
+        edges {
+          node {
+            footerQuote
+          }
+        }
+      }
       file(relativePath: { eq: "charis.jpg" }) {
         childImageSharp {
           fixed(width: 100, height: 100, quality: 60) {
@@ -22,10 +27,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-image-text">
         <Img fixed={data.file.childImageSharp.fixed} />
-        <p>
-          Working with people who appreciate art is our passion; we'd love to tell your wedding
-          story.
-        </p>
+        <p>{data.allDatoCmsHomePage.edges[0].node.footerQuote}</p>
       </div>
       <div className="footer-links">
         <ul>

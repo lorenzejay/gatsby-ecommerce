@@ -73,7 +73,6 @@ export default function Presets({ className }) {
             title={product.name}
             isDesktop={product.isDesktopPreset}
             price={product.price}
-            description={product.description}
           />
         ))}
       </div>
