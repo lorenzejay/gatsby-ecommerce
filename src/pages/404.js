@@ -1,10 +1,22 @@
-import React from 'react'
+import { Link } from "gatsby";
+import React from "react";
+import Layout from "../layouts";
+import "../style/404.scss";
+import { FaSadCry } from "react-icons/fa";
 
 const NotFoundPage = () => (
-  <div>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </div>
-)
+  <Layout>
+    <div className="error-pages">
+      <h1>404</h1>
+      <h5>
+        Page not found <FaSadCry size="40" />{" "}
+      </h5>
 
-export default NotFoundPage
+      <p>
+        Let's bring you back to home here: <Link to="/">Home</Link>
+      </p>
+    </div>
+  </Layout>
+);
+
+export default NotFoundPage;
