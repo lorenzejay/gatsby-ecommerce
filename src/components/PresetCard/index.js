@@ -2,8 +2,7 @@ import { Link } from "gatsby";
 import React from "react";
 import "./styles.scss";
 
-const PresetCard = ({ image, title, price, link, id, description, guid, isDesktop }) => {
-  console.log(isDesktop);
+const PresetCard = ({ image, title, price, link, id, description, guid, isDesktop, slug }) => {
   return (
     <div className="preset-card">
       <Link to={link}>
@@ -12,7 +11,7 @@ const PresetCard = ({ image, title, price, link, id, description, guid, isDeskto
       <div className="preset-card-container">
         <h3>{title}</h3>
       </div>
-      <hr />
+
       <div className="preset-card-price-addcart">
         <p>${parseInt(price)}</p>
 
@@ -20,7 +19,7 @@ const PresetCard = ({ image, title, price, link, id, description, guid, isDeskto
           className="snipcart-add-item"
           data-item-id={id}
           data-item-price={price}
-          data-item-url={"/"}
+          data-item-url={`https://charispresets.com/presets/${slug}`}
           data-item-description={description}
           data-item-name={title}
           data-item-image={image}
