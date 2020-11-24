@@ -5,7 +5,7 @@ export const HomeImageText = styled.h2`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   color: white;
   text-transform: uppercase;
 `;

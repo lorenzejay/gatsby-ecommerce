@@ -70,7 +70,7 @@ export default function Home({ className }) {
         backgroundColor={`#040e18`}
         style={{ width: "100%", height: 300, backgroundSize: "cover" }}
       >
-        <HomeImageText>Charis Cheung</HomeImageText>
+        <HomeImageText>Home</HomeImageText>
       </BackgroundImage>
       <HomeParagraphSpacing>
         <h2>{homePageData.title}</h2>
