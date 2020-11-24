@@ -1,21 +1,27 @@
 .Catalogue {
-  background-color: #edece8;
-  height: 100vh;
+  background-color: #ffffff;
+  min-height: 100vh;
+  padding: 5%;
 }
 
-.Catalogue__item {
-  margin-bottom: 60px;
-}
-
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
   .Catalogue {
+    padding: 5% 0;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     flex-wrap: wrap;
-  }
 
-  .Catalogue__item {
-    width: 45%;
+    width: 100%;
+    .preset-card {
+      transform: none;
+      margin: 5vh auto;
+      width: 80%;
+      height: 55vh;
+      img {
+        object-fit: cover;
+      }
+    }
   }
 }
 
