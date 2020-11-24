@@ -48,7 +48,7 @@ const ProductTemplate = ({ pageContext }) => {
               className="snipcart-add-item"
               data-item-id={preset.id}
               data-item-price={preset.price}
-              data-item-url={`/${preset.slug}`}
+              data-item-url={"https://charispresets.com/"}
               data-item-description={preset.description}
               data-item-name={preset.name}
               data-item-image={preset.image.url}
