@@ -5,7 +5,10 @@ nav {
     display: flex;
   }
   .logo {
-    font-size: 24px;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: bold;
+
     &:hover {
       text-decoration: none;
     }
