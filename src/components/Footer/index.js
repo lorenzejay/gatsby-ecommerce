@@ -44,7 +44,7 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/charis.cheung//">Instagram</a>
+            <a href="https://www.instagram.com/charis.cheung/">Instagram</a>
           </li>
         </ul>
       </div>
