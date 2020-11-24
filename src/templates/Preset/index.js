@@ -28,13 +28,15 @@ const ProductTemplate = ({ pageContext }) => {
                   rightImage={beforeAfter2}
                 />
               </Carousel.Item>
-              <Carousel.Item>
-                <ReactCompareImage
-                  className="preset-compare"
-                  leftImage={beforeAfter3}
-                  rightImage={beforeAfter4}
-                />
-              </Carousel.Item>
+              {beforeAfter3 && beforeAfter4 && (
+                <Carousel.Item>
+                  <ReactCompareImage
+                    className="preset-compare"
+                    leftImage={beforeAfter3}
+                    rightImage={beforeAfter4}
+                  />
+                </Carousel.Item>
+              )}
             </Carousel>
             <p className="preset-description">{preset.description}</p>
           </div>
