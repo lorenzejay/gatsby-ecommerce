@@ -1,5 +1,5 @@
 .preset-container {
-  min-height: 110vh;
+  min-height: 140vh;
   padding: 5%;
   background-color: #f1f1f1;
   a {
@@ -16,30 +16,31 @@
     .preset-display-container {
       display: flex;
       flex-direction: column;
-      width: 50vw;
+      width: 60vw;
       .preset-description {
         margin-top: 8vh;
         font-size: 1.2rem;
       }
-    }
-    .carousel,
-    .slide {
-      height: 350px;
-    }
-    .carousel {
-      max-height: 500px;
-      width: 100%;
+      .carousel,
+      .slide {
+        height: 350px;
+      }
+      .carousel {
+        max-height: 350px;
+        width: 100%;
 
-      .carousel-inner {
-        .carousel-item {
-          div {
-            max-height: 350px;
+        .carousel-inner {
+          .carousel-item {
+            div {
+              max-height: 350px;
+            }
           }
         }
-      }
-      img {
-        max-height: 500px;
-        object-fit: cover;
+        img {
+          max-height: 350px;
+          width: 100%;
+          object-fit: cover;
+        }
       }
     }
 
@@ -49,20 +50,21 @@
       flex-direction: column;
       box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
       width: 30vw;
-      height: 20vh;
-      padding: 2%;
+      height: 23vh;
+      padding: 15px;
       background-color: white;
+      border-radius: 15px;
       h2 {
         text-align: center;
       }
       button {
         padding: 0 15px;
+        margin: auto 0;
         background-color: #fff;
         border-radius: 15px;
         color: black;
         border: #ffb6c1 2px solid;
         outline: none;
-        height: 5vh;
 
         cursor: pointer;
         &:hover {
@@ -71,7 +73,51 @@
         p {
           font-size: 22px;
           text-transform: uppercase;
+          margin: 0 auto;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .preset-container {
+    min-height: 140vh;
+    .preset-split {
+      flex-direction: column;
+      min-height: 80vh;
+      width: 100%;
+      .preset-display-container {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+
+        .carousel,
+        .slide {
+          height: 500px;
+        }
+        .carousel {
+          height: 500px;
+          width: 100%;
+
+          .carousel-inner {
+            .carousel-item {
+              div {
+                height: 500px;
+              }
+            }
+          }
+          img {
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+      .preset-purchase-container {
+        width: 80%;
+        height: 15vh;
+        padding: 15px;
+        margin: 0 auto;
       }
     }
   }

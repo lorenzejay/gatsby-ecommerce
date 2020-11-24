@@ -1,5 +1,5 @@
 import "./styles.scss";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Layout from "../../layouts";
 import ReactCompareImage from "react-compare-image";
 import { Carousel } from "react-bootstrap";
@@ -8,7 +8,7 @@ import { Link } from "gatsby";
 
 const ProductTemplate = ({ pageContext }) => {
   const { preset } = pageContext;
-  console.log(preset);
+
   const beforeAfter1 = preset.beforeAndAfter[0].url;
   const beforeAfter2 = preset.beforeAndAfter[1].url;
   const beforeAfter3 = preset.beforeAndAfter2.length !== 0 && preset.beforeAndAfter2[0].url;
