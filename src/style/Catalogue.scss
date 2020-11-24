@@ -7,19 +7,43 @@
 @media screen and (max-width: 600px) {
   .Catalogue {
     padding: 5% 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex-wrap: wrap;
-
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    //display: flex
+    // justify-content: space-around;
+    width: inherit;
     .preset-card {
       transform: none;
       margin: 5vh auto;
-      width: 80%;
-      height: 55vh;
+      padding: 0 0 5px;
+      width: 180px;
+      height: 37vh;
+      .preset-card-description {
+        height: 5vh;
+      }
+      .preset-card-container {
+        height: 3vh;
+      }
+      h3 {
+        font-size: 20px;
+      }
+      .preset-card-price-addcart {
+        margin-top: 10px;
+
+        align-items: flex-start;
+        button {
+          width: auto;
+
+          p {
+            font-size: 12px;
+          }
+        }
+      }
       img {
-        object-fit: cover;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
       }
     }
   }
