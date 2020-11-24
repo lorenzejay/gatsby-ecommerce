@@ -12,6 +12,7 @@ exports.createPages = ({ graphql, actions }) => {
             price
             description
             slug
+            fileGuid
             beforeAndAfter {
               url
             }

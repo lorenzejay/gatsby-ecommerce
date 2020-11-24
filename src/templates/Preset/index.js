@@ -52,6 +52,7 @@ const ProductTemplate = ({ pageContext }) => {
               data-item-description={preset.description}
               data-item-name={preset.name}
               data-item-image={preset.image.url}
+              data-item-file-guid={preset.fileGuid}
             >
               <p>Add to cart</p>
             </button>
