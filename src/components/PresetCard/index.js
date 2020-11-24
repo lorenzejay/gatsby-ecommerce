@@ -24,7 +24,6 @@ const PresetCard = ({ image, title, price, link, id, description, guid, isDeskto
           data-item-description={description}
           data-item-name={title}
           data-item-image={image}
-          data-item-file-guid={guid}
         >
           <p>Add to cart</p>
         </button>
