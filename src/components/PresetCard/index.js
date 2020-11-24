@@ -10,12 +10,9 @@ const PresetCard = ({ image, title, price, link, id, description, sku, isDesktop
         <img src={image} alt={title} />
       </Link>
       <div className="preset-card-container">
-        <h3>
-          {title}
-          <span> ({isDesktop ? "Desktop" : "Mobile"})</span>
-        </h3>
-        <p className="preset-card-description">{description}</p>
+        <h3>{title}</h3>
       </div>
+      <hr />
       <div className="preset-card-price-addcart">
         <p>${parseInt(price)}</p>
 

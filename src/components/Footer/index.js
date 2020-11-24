@@ -6,13 +6,6 @@ import Img from "gatsby-image";
 const Footer = () => {
   const data = useStaticQuery(graphql`
     query {
-      allDatoCmsHomePage {
-        edges {
-          node {
-            footerQuote
-          }
-        }
-      }
       file(relativePath: { eq: "charis.jpg" }) {
         childImageSharp {
           fixed(width: 100, height: 100, quality: 60) {
@@ -27,7 +20,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-image-text">
         <Img fixed={data.file.childImageSharp.fixed} />
-        <p>{data.allDatoCmsHomePage.edges[0].node.footerQuote}</p>
+        {/* <p>{data.allDatoCmsHomePage.edges[0].node.footerQuote}</p> */}
       </div>
       <div className="footer-links">
         <ul>

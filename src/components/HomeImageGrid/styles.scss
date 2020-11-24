@@ -6,10 +6,10 @@
     font-size: 2rem;
   }
   .HomeImageGrid {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    align-items: center;
     gap: 5vw;
+    overflow-y: scroll;
     img {
       width: 250px;
       height: 250px;
