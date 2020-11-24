@@ -85,7 +85,9 @@ export default function Home({ className }) {
       <HomePagePresetCardsContainer>
         <HomeImageGrid>
           {data.allDatoCmsHomePage.edges[0].node.homeScreenGallery.map((item, i) => (
-            <img src={item.url} alt={"Examples from Charis Cheung portfolio"} key={i} />
+            <a href="https://www.instagram.com/charis.cheung/">
+              <img src={item.url} alt={"Examples from Charis Cheung portfolio"} key={i} />
+            </a>
           ))}
         </HomeImageGrid>
       </HomePagePresetCardsContainer>
