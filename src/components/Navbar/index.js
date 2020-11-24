@@ -2,7 +2,7 @@ import { Link, graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import "./styles.scss";
 import { BiShoppingBag } from "react-icons/bi";
-import { Navbar, Nav, NavLink } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 
 const NavbarComponent = () => {
   const data = useStaticQuery(graphql`
