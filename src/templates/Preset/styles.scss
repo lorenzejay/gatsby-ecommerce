@@ -12,34 +12,35 @@
     display: flex;
     gap: 10vw;
     padding: 0;
-    height: 80vh;
+    min-height: 80vh;
     .preset-display-container {
       display: flex;
       flex-direction: column;
-      width: 60vw;
+      width: 50vw;
+
       .preset-description {
         margin-top: 8vh;
         font-size: 1.2rem;
       }
       .carousel,
       .slide {
-        height: 350px;
+        height: 500px;
       }
       .carousel {
-        max-height: 350px;
+        max-height: 500px;
         width: 100%;
 
         .carousel-inner {
           .carousel-item {
             div {
-              max-height: 350px;
+              max-height: 500px;
             }
           }
         }
         img {
-          max-height: 350px;
+          max-height: 500px;
           width: 100%;
-          object-fit: cover;
+          object-fit: fill;
         }
       }
     }
