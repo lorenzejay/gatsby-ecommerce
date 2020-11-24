@@ -15,6 +15,7 @@ export default function Presets({ className }) {
             id
             name
             price
+            fileGuid
             description
             slug
             isDesktopPreset
@@ -74,6 +75,7 @@ export default function Presets({ className }) {
             title={product.name}
             isDesktop={product.isDesktopPreset}
             price={product.price}
+            guide={product.fileGuid}
           />
         ))}
       </div>
