@@ -14,22 +14,28 @@
     // justify-content: space-around;
     width: inherit;
     .preset-card {
+      border-radius: 5px;
       transform: none;
       margin: 5vh auto;
       padding: 0 0 5px;
       width: 180px;
-      height: 37vh;
+      height: 36vh;
+
+      a {
+        height: 100%;
+      }
       .preset-card-description {
-        height: 5vh;
+        height: 3vh;
+        margin: 0 auto;
       }
       .preset-card-container {
-        height: 3vh;
+        height: 2vh;
       }
       h3 {
         font-size: 20px;
       }
       .preset-card-price-addcart {
-        margin-top: 10px;
+        margin-top: 13px;
 
         align-items: flex-start;
         button {
