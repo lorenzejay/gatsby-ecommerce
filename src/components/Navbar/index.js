@@ -17,22 +17,24 @@ const NavbarComponent = () => {
   `);
   console.log(data);
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="sm">
       <Link to="/" className="logo">
         Charis Cheung
       </Link>
+
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
           <Link to="/presets">Presets</Link>
           <Link to="/help">Help</Link>
-          <div className="shop-cart">
-            <span className="snipcart-checkout" style={{ cursor: "pointer" }}>
-              <BiShoppingBag size="20" />
-            </span>
-            <span className="snipcart-items-count"></span>
-          </div>
         </Nav>
+        <div className="shop-cart">
+          <span className="snipcart-checkout" style={{ cursor: "pointer" }}>
+            <BiShoppingBag size="25" />
+          </span>
+          <span className="snipcart-items-count"></span>
+        </div>
       </Navbar.Collapse>
     </Navbar>
     // <nav className="navbar">

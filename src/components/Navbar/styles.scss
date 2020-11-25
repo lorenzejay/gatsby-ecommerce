@@ -1,9 +1,7 @@
 nav {
   min-height: 10vh;
   padding: 0 5%;
-  .shop-cart {
-    display: flex;
-  }
+
   .logo {
     font-size: 28px;
     text-transform: uppercase;
@@ -27,6 +25,14 @@ nav {
   }
 }
 
+// @media screen and (max-width: 600px) {
+//   nav {
+//     .shop-cart {
+//       top: 20px;
+//       right: 85px;
+//     }
+//   }
+// }
 // .navbar {
 //   display: flex;
 //   align-items: center;
