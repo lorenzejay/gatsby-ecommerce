@@ -4,29 +4,40 @@ import "../style/Help.scss";
 import { graphql, useStaticQuery } from "gatsby";
 
 export default function Help() {
-  const data = useStaticQuery(graphql`
-    query {
-      allDatoCmsHelpPage {
-        edges {
-          node {
-            title
-            howToDownloadForDesktop
-            howToDownloadForMobile
-          }
-        }
-      }
-    }
-  `);
-  console.log(data.allDatoCmsHelpPage.edges[0].node);
-  const helpPageData = data.allDatoCmsHelpPage.edges[0].node;
   return (
     <Layout>
       <div className="help-page">
-        <h1>{helpPageData.title}</h1>
-        <h4>How to Download for Lightroom (Desktop)</h4>
-        <p>{helpPageData.howToDownloadForDesktop}</p>
-        <h4>How to Download for Lightroom (Mobile)</h4>
-        <p>{helpPageData.howToDownloadForMobile}</p>
+        <h1>How to Download my Presets</h1>
+        <div>
+          <h4>How to Download for Lightroom (Desktop)</h4>
+          <ol>
+            <li>Download the your preset. You should have recieved an .xmp file.</li>
+            <li>
+              Open Lightroom Classic and if you're on windows press on edit then Preferences, on
+              apple the Lighroom tab then presets.
+            </li>
+            <li>Choose the preset tab.</li>
+            <li>Drag and drop you the preset you downloaded into the Settings folder.</li>
+            <li>Restart Lightroom.</li>
+            <li>You should now have the presets on the Presets tab.</li>
+          </ol>
+          <p>
+            Additional Resources to help you{" "}
+            <a href="https://www.lookslikefilm.com/2019/02/03/how-to-install-lightroom-presets/">
+              How to download presets
+            </a>
+          </p>
+        </div>
+
+        <div>
+          <h4>How to Download for Lightroom (Mobile)</h4>
+          <ol></ol>
+
+          <h4>If you need help</h4>
+          <p>
+            Send me an email <a href="mailto:charispeace7@gmail.com">here</a>
+          </p>
+        </div>
       </div>
     </Layout>
   );

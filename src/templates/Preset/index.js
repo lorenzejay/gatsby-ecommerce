@@ -26,6 +26,16 @@ const ProductTemplate = ({ pageContext }) => {
                   className="preset-compare"
                   leftImage={beforeAfter1}
                   rightImage={beforeAfter2}
+                  leftImageCss={{
+                    objectFit: "contain",
+                    objectPosition: "center",
+                    width: "inherit",
+                  }}
+                  rightImageCss={{
+                    objectFit: "contain",
+                    objectPosition: "center",
+                    width: "inherit",
+                  }}
                 />
               </Carousel.Item>
               {beforeAfter3 && beforeAfter4 && (

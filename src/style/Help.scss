@@ -9,8 +9,13 @@
     text-decoration: underline;
     margin: 5vh 0;
   }
+  ol {
+    list-style: decimal;
+  }
   p {
-    width: 75%;
-    line-height: 2;
+    align-self: flex-start;
+  }
+  a {
+    color: #ffb6c1;
   }
 }
