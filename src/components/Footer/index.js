@@ -1,14 +1,14 @@
 import React from "react";
 import "./styles.scss";
 import { graphql, useStaticQuery, Link } from "gatsby";
-import Img from "gatsby-image";
+import Img from "gatsby-image/withIEPolyfill";
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "charis.jpg" }) {
         childImageSharp {
-          fixed(width: 100, height: 100, quality: 60) {
+          fixed(height: 75, width: 75, quality: 60) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -19,7 +19,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-image-text">
-        <Img fixed={data.file.childImageSharp.fixed} />
+        <Img fixed={data.file.childImageSharp.fixed} objectPosition="bottom" />
         {/* <p>{data.allDatoCmsHomePage.edges[0].node.footerQuote}</p> */}
       </div>
       <div className="footer-links">

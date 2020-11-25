@@ -2,18 +2,20 @@ footer {
   padding: 5%;
   background-color: #edece8;
   height: 50;
+
   .footer-image-text {
     display: flex;
     align-items: center;
+    height: 10vh;
     gap: 5vw;
+    img {
+      border-radius: 50%;
+    }
     p {
       font-size: 1.2rem;
     }
   }
-  img {
-    border-radius: 50%;
-    object-fit: cover;
-  }
+
   .footer-links {
     display: flex;
     margin-top: 2vh;
