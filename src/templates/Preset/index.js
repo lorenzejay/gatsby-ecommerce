@@ -4,11 +4,24 @@ import Layout from "../../layouts";
 import ReactCompareImage from "react-compare-image";
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "gatsby";
+import { Link, graphql, useStaticQuery } from "gatsby";
 
 const ProductTemplate = ({ pageContext }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      allDatoCmsPresetDetail {
+        nodes {
+          desktopDetails {
+            title
+            description
+          }
+        }
+      }
+    }
+  `);
   const { preset } = pageContext;
-
+  const desktopPresetDetails = data.allDatoCmsPresetDetail.nodes[0].desktopDetails;
+  console.log(desktopPresetDetails);
   const beforeAfter1 = preset.beforeAndAfter[0].url;
   const beforeAfter2 = preset.beforeAndAfter[1].url;
   const beforeAfter3 = preset.beforeAndAfter2.length !== 0 && preset.beforeAndAfter2[0].url;
@@ -67,6 +80,14 @@ const ProductTemplate = ({ pageContext }) => {
               <p>Add to cart</p>
             </button>
           </div>
+        </div>
+        <div className="preset-disclaimer-wrapper">
+          {desktopPresetDetails.map((detail, i) => (
+            <div className="preset-disclaimer-content" key={i}>
+              <h4>{detail.title}</h4>
+              <p>{detail.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </Layout>

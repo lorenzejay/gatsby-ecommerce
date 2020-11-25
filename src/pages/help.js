@@ -1,11 +1,12 @@
 import React from "react";
 import Layout from "../layouts";
 import "../style/Help.scss";
-import { graphql, useStaticQuery } from "gatsby";
+import { Helmet } from "react-helmet";
 
 export default function Help() {
   return (
     <Layout>
+      <Helmet title="Help" />
       <div className="help-page">
         <h1>How to Download my Presets</h1>
         <div>

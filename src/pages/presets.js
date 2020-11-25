@@ -5,6 +5,7 @@ import BackgroundImage from "gatsby-background-image";
 import PresetCard from "../components/PresetCard";
 import { HomeImageText } from "../style/MainBackground";
 import "../style/Presets.scss";
+import { Helmet } from "react-helmet";
 
 export default function Presets({ className }) {
   const data = useStaticQuery(graphql`
@@ -49,6 +50,7 @@ export default function Presets({ className }) {
   const imageData = data.desktop.childImageSharp.fluid;
   return (
     <Layout>
+      <Helmet title="Presets" />
       <BackgroundImage
         tag="section"
         fluid={imageData}

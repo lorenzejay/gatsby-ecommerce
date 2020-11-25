@@ -21,6 +21,7 @@
       .preset-description {
         margin-top: 8vh;
         font-size: 1.2rem;
+        width: 100%;
       }
       .carousel,
       .slide {
@@ -78,6 +79,24 @@
       }
     }
   }
+  .preset-disclaimer-wrapper {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 10vh;
+    .preset-disclaimer-content {
+      width: 400px;
+      h4 {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -122,6 +141,14 @@
         height: 15vh;
         padding: 15px;
         margin: 0 auto;
+      }
+    }
+    .preset-disclaimer-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      .preset-disclaimer-content {
+        width: fit-content;
       }
     }
   }
