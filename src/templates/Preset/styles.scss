@@ -2,87 +2,130 @@
   min-height: 140vh;
   padding: 5%;
   background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5vh;
+  .preset-container-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    h1 {
+      text-align: center;
+    }
+    p {
+      margin: auto;
+      width: 40%;
+      text-align: center;
+    }
+    button {
+      padding: 3px 15px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 15px;
+      color: black;
+      border: #ffb6c1 2px solid;
+      outline: none;
+      width: 25vw;
+
+      cursor: pointer;
+      &:hover {
+        background-color: #ffb6c1;
+      }
+      p {
+        font-size: 16px;
+        text-transform: uppercase;
+        margin: 0 auto;
+      }
+    }
+  }
   a {
     color: #ffb6c1;
     &:hover {
       text-decoration: underline;
     }
   }
-  .preset-split {
-    display: flex;
-    gap: 10vw;
-    padding: 0;
-    min-height: 80vh;
-    .preset-display-container {
-      display: flex;
-      flex-direction: column;
-      width: 50vw;
+  .carousel,
+  .slide {
+    height: 500px;
+    width: 420px;
+  }
+  .carousel {
+    max-height: 500px;
+    width: 420px;
 
-      .preset-description {
-        margin-top: 8vh;
-        font-size: 1.2rem;
-        width: 100%;
-      }
-      .carousel,
-      .slide {
-        height: 500px;
-      }
-      .carousel {
-        max-height: 500px;
-        width: 100%;
-
-        .carousel-inner {
-          .carousel-item {
-            div {
-              max-height: 500px;
-            }
-          }
-        }
-        img {
-          height: 500px;
-          width: 100%;
+    .carousel-inner {
+      .carousel-item {
+        div {
+          max-height: 500px;
+          width: inherit;
         }
       }
     }
-
-    .preset-purchase-container {
-      display: flex;
-      margin-top: 10vh;
-      flex-direction: column;
-      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-      width: 30vw;
-      height: 23vh;
-      padding: 15px;
-      background-color: white;
-      border-radius: 15px;
-      h2 {
-        text-align: center;
-      }
-      button {
-        padding: 0 15px;
-        margin: auto 0;
-        background-color: #fff;
-        border-radius: 15px;
-        color: black;
-        border: #ffb6c1 2px solid;
-        outline: none;
-
-        cursor: pointer;
-        &:hover {
-          background-color: #ffb6c1;
-        }
-        p {
-          font-size: 22px;
-          text-transform: uppercase;
-          margin: 0 auto;
-        }
-      }
+    img {
+      height: 500px;
+      width: 420px;
     }
   }
+  // .preset-split {
+  //   // display: flex;
+  //   // gap: 3vw;
+  //   // padding: 0;
+  //   height: 500px;
+  //   .preset-display-container {
+  //     display: flex;
+  //     flex-direction: column;
+  //     width: 50vw;
+
+  //     .preset-description {
+  //       margin-top: 8vh;
+  //       font-size: 1.2rem;
+  //       width: 100%;
+  //     }
+  //   }
+
+  //   .preset-purchase-container {
+  //     display: flex;
+  //     margin-top: 10vh;
+  //     flex-direction: column;
+  //     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  //     width: 30vw;
+  //     height: 23vh;
+  //     padding: 15px;
+  //     background-color: white;
+  //     border-radius: 15px;
+  //     h2 {
+  //       text-align: center;
+  //     }
+  //     button {
+  //       padding: 0 15px;
+  //       margin: auto 0;
+  //       background-color: #fff;
+  //       border-radius: 15px;
+  //       color: black;
+  //       border: #ffb6c1 2px solid;
+  //       outline: none;
+
+  //       cursor: pointer;
+  //       &:hover {
+  //         background-color: #ffb6c1;
+  //       }
+  //       p {
+  //         font-size: 22px;
+  //         text-transform: uppercase;
+  //         margin: 0 auto;
+  //       }
+  //     }
+  //   }
+  // }
   .preset-disclaimer-wrapper {
     width: 100%;
     display: grid;
-    justify-content: center;
+    justify-content: space-around;
+
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     margin-top: 10vh;
@@ -102,46 +145,76 @@
 @media screen and (max-width: 600px) {
   .preset-container {
     min-height: 150vh;
-    .preset-split {
-      flex-direction: column;
-      min-height: 80vh;
+    .preset-container-title {
+      p {
+        width: 100%;
+      }
+      button {
+        width: 40vw;
+        font-size: 26px;
+      }
+    }
+    .carousel,
+    .slide {
+      height: 500px;
       width: 100%;
-      height: 120vh;
-      .preset-display-container {
-        margin: auto;
-        display: flex;
-        flex-direction: column;
+    }
+    .carousel {
+      height: 500px;
+      width: 100%;
 
-        width: 90%;
-        .carousel,
-        .slide {
-          height: 500px;
-        }
-        .carousel {
-          height: 500px;
-          width: 100%;
-
-          .carousel-inner {
-            .carousel-item {
-              div {
-                height: 500px;
-              }
-            }
-          }
-          img {
+      .carousel-inner {
+        .carousel-item {
+          div {
+            height: 500px;
             width: 100%;
-            object-fit: cover;
           }
         }
       }
-      .preset-purchase-container {
-        display: flex;
-
-        width: 80%;
-        height: 15vh;
-        padding: 15px;
-        margin: 0 auto;
+      img {
+        width: 100%;
       }
+
+      // .preset-split {
+      //   flex-direction: column;
+      //   min-height: 80vh;
+      //   width: 100%;
+      //   height: 120vh;
+      //   .preset-display-container {
+      //     margin: auto;
+      //     display: flex;
+      //     flex-direction: column;
+
+      //     width: 90%;
+      //     .carousel,
+      //     .slide {
+      //       height: 500px;
+      //     }
+      //     .carousel {
+      //       height: 500px;
+      //       width: 100%;
+
+      //       .carousel-inner {
+      //         .carousel-item {
+      //           div {
+      //             height: 500px;
+      //           }
+      //         }
+      //       }
+      //       img {
+      //         width: 100%;
+      //         object-fit: cover;
+      //       }
+      //     }
+      //   }
+      // .preset-purchase-container {
+      //   display: flex;
+
+      //   width: 80%;
+      //   height: 15vh;
+      //   padding: 15px;
+      //   margin: 0 auto;
+      // }
     }
     .preset-disclaimer-wrapper {
       display: flex;
