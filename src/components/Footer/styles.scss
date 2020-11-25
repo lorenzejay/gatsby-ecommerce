@@ -1,8 +1,14 @@
-footer {
-  padding: 5%;
+.custom-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3% 2%;
   background-color: #edece8;
-  height: 50;
-
+  height: 25vh;
+  .footer-copyright {
+    width: 23%;
+  }
   .footer-image-text {
     display: flex;
     align-items: center;
@@ -18,16 +24,31 @@ footer {
 
   .footer-links {
     display: flex;
+    flex-direction: column;
     margin-top: 2vh;
-    gap: 10vw;
-    li {
-      list-style: none;
-      margin-top: 2vh;
-    }
     a {
       color: black;
-      text-decoration: none;
-      font-size: 1.15rem;
+      text-decoration: underline;
+      font-size: 1rem;
+    }
+    ul {
+      display: flex;
+      li {
+        list-style: none;
+
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .custom-footer {
+    padding: 5% 0;
+    flex-direction: column;
+    gap: 2vh;
+    .footer-copyright {
+      width: 80%;
     }
   }
 }
