@@ -13,45 +13,6 @@
     //display: flex
     // justify-content: space-around;
     width: inherit;
-    .preset-card {
-      border-radius: 5px;
-      transform: none;
-      margin: 5vh auto;
-      padding: 0 0 5px;
-      width: 180px;
-      height: 36vh;
-
-      a {
-        height: 100%;
-      }
-      .preset-card-description {
-        height: 3vh;
-        margin: 0 auto;
-      }
-      .preset-card-container {
-        height: 2vh;
-      }
-      h3 {
-        font-size: 20px;
-      }
-      .preset-card-price-addcart {
-        margin-top: 13px;
-
-        align-items: flex-start;
-        button {
-          width: auto;
-
-          p {
-            font-size: 12px;
-          }
-        }
-      }
-      img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-      }
-    }
   }
 }
 
