@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.scss";
 import { graphql, useStaticQuery } from "gatsby";
-import Img from "gatsby-image/withIEPolyfill";
+import Img from "gatsby-image";
 import { AiOutlineInstagram } from "react-icons/ai";
 const Footer = () => {
   const data = useStaticQuery(graphql`

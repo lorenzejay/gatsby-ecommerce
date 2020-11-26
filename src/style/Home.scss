@@ -1,0 +1,50 @@
+.carousel {
+  height: 105vh;
+  width: 100%;
+  .carousel-item {
+    height: 105vh;
+    width: 100%;
+    button {
+      padding: 5px 15px;
+      font-size: 20px;
+      margin: auto 0;
+      background-color: #fff;
+      border-radius: 5px;
+      color: black;
+      border: #ffb6c1 1px solid;
+      outline: none;
+      text-transform: uppercase;
+      cursor: pointer;
+      &:hover {
+        background-color: #ffb6c1;
+      }
+    }
+  }
+}
+
+.Home-presets-links-container {
+  padding: 0 5%;
+  margin: 10vh 0;
+  .Home-page-preset-link-images {
+    display: flex;
+    gap: 5vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Home-presets-links-container {
+    overflow-y: scroll;
+  }
+  .carousel {
+    width: 100%;
+    height: 32vh;
+    .carousel-item {
+      width: 100%;
+      height: 32vh;
+
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+}

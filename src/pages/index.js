@@ -1,10 +1,12 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 import Layout from "../layouts/index";
-import { HomeImageText } from "../style/MainBackground";
-import BackgroundImage from "gatsby-background-image";
 import styled from "@emotion/styled";
 import HomeImageGrid from "../components/HomeImageGrid/index";
+import { Carousel } from "react-bootstrap";
+import "../style/Home.scss";
+import Img from "gatsby-image/withIEPolyfill";
+
 export default function Home({ className }) {
   const data = useStaticQuery(graphql`
     query {
@@ -12,6 +14,9 @@ export default function Home({ className }) {
         edges {
           node {
             homeScreenGallery {
+              url
+            }
+            homeScreenHeaderImages {
               url
             }
             title
@@ -26,10 +31,17 @@ export default function Home({ className }) {
           }
         }
       }
-      desktop: file(relativePath: { eq: "cc1.JPG" }) {
+      desktopPreset: file(relativePath: { eq: "desktopPreset.jpeg" }) {
         childImageSharp {
-          fluid(quality: 90, maxWidth: 1920) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(quality: 90, maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      mobilePreset: file(relativePath: { eq: "mobilePreset.jpeg" }) {
+        childImageSharp {
+          fluid(quality: 90, maxWidth: 300) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -56,22 +68,32 @@ export default function Home({ className }) {
       margin: 20px 0;
     }
   `;
+  const CarouselImage = styled.img`
+    width: inherit;
+    object-fit: cover;
+    object-position: top;
+  `;
 
-  const imageData = data.desktop.childImageSharp.fluid;
+  console.log(data);
+  // const desktopPresetImage = data.desktopPreset.childImageSharp.fluid;
+  // const mobilePresetImage = data.mobilePreset.childImageSharp.fluid;
   const homePageData = data.allDatoCmsHomePage.edges[0].node;
   const homePageText = homePageData.homeText;
+  console.log(homePageData.homeScreenHeaderImages);
 
   return (
     <Layout>
-      <BackgroundImage
-        Tag="section"
-        fluid={imageData}
-        className={className}
-        backgroundColor={`#040e18`}
-        style={{ width: "100%", height: 300, backgroundSize: "cover" }}
-      >
-        <HomeImageText>Home</HomeImageText>
-      </BackgroundImage>
+      <Carousel>
+        {homePageData.homeScreenHeaderImages.map((item, i) => (
+          <Carousel.Item>
+            <CarouselImage src={item.url} />
+            <Carousel.Caption>
+              <button>Shop Now</button>
+            </Carousel.Caption>
+          </Carousel.Item>
+        ))}
+      </Carousel>
+
       <HomeParagraphSpacing>
         <h2>{homePageData.title}</h2>
         <p>{homePageText[0].body1}</p>
@@ -81,6 +103,26 @@ export default function Home({ className }) {
         <p>{homePageText[0].body5}</p>
         <p>{homePageText[0].body6}</p>
       </HomeParagraphSpacing>
+
+      <div className="Home-presets-links-container">
+        <h2>Check out my presets here.</h2>
+        <div className="Home-page-preset-link-images">
+          <Link to="/presets">
+            <Img
+              fluid={data.desktopPreset.childImageSharp.fluid}
+              objectFit="cover"
+              style={{ width: 300 }}
+            />
+          </Link>
+          <Link to="/presets">
+            <Img
+              fluid={data.mobilePreset.childImageSharp.fluid}
+              objectFit="cover"
+              style={{ width: 300 }}
+            />
+          </Link>
+        </div>
+      </div>
 
       <HomePagePresetCardsContainer>
         <HomeImageGrid>
