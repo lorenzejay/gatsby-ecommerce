@@ -15,7 +15,11 @@ const PresetCard = ({ image, title, price, link, id, description, guid, isDeskto
 
           <div className="preset-card-price-addcart">
             <p>${parseInt(price)}</p>
-            <p className="preset-card-description ">{description}</p>
+            <Link to={`/presets/${slug}`}>
+              <button>
+                <p>View</p>
+              </button>
+            </Link>
             <button
               className="snipcart-add-item"
               data-item-id={id}
@@ -27,9 +31,6 @@ const PresetCard = ({ image, title, price, link, id, description, guid, isDeskto
               data-item-file-guid={guid}
             >
               <p>Add to cart</p>
-            </button>
-            <button>
-              <p>View</p>
             </button>
           </div>
         </div>
