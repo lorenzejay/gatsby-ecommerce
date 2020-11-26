@@ -8,7 +8,13 @@ const Contact = () => {
       <div className="Contact">
         <h1>Contact</h1>
         <p>If you need additional help installing your presets, please contact using this form</p>
-        <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
+        <form
+          method="post"
+          netlify-honeypot="bot-field"
+          data-netlify="true"
+          name="contact"
+          action="/thank-you"
+        >
           <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="contact" />
           <div className="form-details">

@@ -31,3 +31,19 @@
     text-transform: uppercase;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .Contact {
+    p {
+      width: 75%;
+      text-align: center;
+    }
+    form {
+      width: 85%;
+      .form-details {
+        padding: 2% 0;
+        width: 100%;
+      }
+    }
+  }
+}

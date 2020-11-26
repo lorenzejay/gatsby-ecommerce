@@ -28,6 +28,7 @@ const NavbarComponent = () => {
         <Nav className="ml-auto">
           <Link to="/presets">Presets</Link>
           <Link to="/help">Help</Link>
+          <Link to="/contact">Contact</Link>
         </Nav>
         <div className="shop-cart">
           <span className="snipcart-checkout" style={{ cursor: "pointer" }}>
