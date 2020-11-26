@@ -13,10 +13,27 @@ exports.createPages = ({ graphql, actions }) => {
             description
             slug
             fileGuid
+            beforeAndAfters {
+              before {
+                url
+              }
+              after {
+                url
+              }
+            }
             beforeAndAfter {
               url
             }
             beforeAndAfter2 {
+              url
+            }
+            beforeAndAfter3 {
+              url
+            }
+            beforeAndAfter4 {
+              url
+            }
+            beforeAndAfter5 {
               url
             }
             image {

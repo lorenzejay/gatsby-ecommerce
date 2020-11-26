@@ -52,12 +52,12 @@
   .carousel,
   .slide {
     height: 500px;
-    width: 420px;
+    width: 360px;
     margin: 5vh 0;
   }
   .carousel {
     max-height: 500px;
-    width: 420px;
+    width: 360px;
 
     .carousel-inner {
       .carousel-item {
@@ -69,7 +69,7 @@
     }
     img {
       height: 500px;
-      width: 420px;
+      width: 100%;
     }
   }
   // .preset-split {
