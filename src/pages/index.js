@@ -83,56 +83,60 @@ export default function Home({ className }) {
 
   return (
     <Layout>
-      <Carousel>
-        {homePageData.homeScreenHeaderImages.map((item, i) => (
-          <Carousel.Item>
-            <CarouselImage src={item.url} />
-            <Carousel.Caption>
-              <button>Shop Now</button>
-            </Carousel.Caption>
-          </Carousel.Item>
-        ))}
-      </Carousel>
-
-      <HomeParagraphSpacing>
-        <h2>{homePageData.title}</h2>
-        <p>{homePageText[0].body1}</p>
-        <p>{homePageText[0].body2}</p>
-        <p>{homePageText[0].body3}</p>
-        <p>{homePageText[0].body4}</p>
-        <p>{homePageText[0].body5}</p>
-        <p>{homePageText[0].body6}</p>
-      </HomeParagraphSpacing>
-
-      <div className="Home-presets-links-container">
-        <h2>Check out my presets here.</h2>
-        <div className="Home-page-preset-link-images">
-          <Link to="/presets">
-            <Img
-              fluid={data.desktopPreset.childImageSharp.fluid}
-              objectFit="cover"
-              style={{ width: 300 }}
-            />
-          </Link>
-          <Link to="/presets">
-            <Img
-              fluid={data.mobilePreset.childImageSharp.fluid}
-              objectFit="cover"
-              style={{ width: 300 }}
-            />
-          </Link>
-        </div>
-      </div>
-
-      <HomePagePresetCardsContainer>
-        <HomeImageGrid>
-          {data.allDatoCmsHomePage.edges[0].node.homeScreenGallery.map((item, i) => (
-            <a href="https://www.instagram.com/charis.cheung/" key={i}>
-              <img src={item.url} alt={"Examples from Charis Cheung portfolio"} />
-            </a>
+      <div className="home-page">
+        <Carousel>
+          {homePageData.homeScreenHeaderImages.map((item, i) => (
+            <Carousel.Item>
+              <CarouselImage src={item.url} />
+              <Carousel.Caption>
+                <Link to="/presets">
+                  <button>Shop Now</button>
+                </Link>
+              </Carousel.Caption>
+            </Carousel.Item>
           ))}
-        </HomeImageGrid>
-      </HomePagePresetCardsContainer>
+        </Carousel>
+
+        <HomeParagraphSpacing>
+          <h2>{homePageData.title}</h2>
+          <p>{homePageText[0].body1}</p>
+          <p>{homePageText[0].body2}</p>
+          <p>{homePageText[0].body3}</p>
+          <p>{homePageText[0].body4}</p>
+          <p>{homePageText[0].body5}</p>
+          <p>{homePageText[0].body6}</p>
+        </HomeParagraphSpacing>
+
+        <div className="Home-presets-links-container">
+          <h2>Check out my presets here.</h2>
+          <div className="Home-page-preset-link-images">
+            <Link to="/presets">
+              <Img
+                fluid={data.desktopPreset.childImageSharp.fluid}
+                objectFit="cover"
+                style={{ width: 300 }}
+              />
+            </Link>
+            <Link to="/presets">
+              <Img
+                fluid={data.mobilePreset.childImageSharp.fluid}
+                objectFit="cover"
+                style={{ width: 300 }}
+              />
+            </Link>
+          </div>
+        </div>
+
+        <HomePagePresetCardsContainer>
+          <HomeImageGrid>
+            {data.allDatoCmsHomePage.edges[0].node.homeScreenGallery.map((item, i) => (
+              <a href="https://www.instagram.com/charis.cheung/" key={i}>
+                <img src={item.url} alt={"Examples from Charis Cheung portfolio"} />
+              </a>
+            ))}
+          </HomeImageGrid>
+        </HomePagePresetCardsContainer>
+      </div>
     </Layout>
   );
 }
