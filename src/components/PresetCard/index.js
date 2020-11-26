@@ -5,10 +5,9 @@ import "./styles.scss";
 const PresetCard = ({ image, title, price, link, id, description, guid, isDesktop, slug }) => {
   return (
     <div className="preset-card">
-      <Link to={link}>
+      <Link to={link} className="preset-link-wrapper">
         <img src={image} alt={title} />
       </Link>
-
       <div className="preset-card-container">
         <div className="preset-card-text">
           <h3>{title}</h3>
