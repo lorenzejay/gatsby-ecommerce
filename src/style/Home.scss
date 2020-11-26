@@ -30,9 +30,6 @@
   .Home-page-preset-link-images {
     display: flex;
     gap: 5vw;
-    img {
-      margin-right: 5vw;
-    }
   }
 }
 
@@ -54,6 +51,12 @@
         img {
           object-fit: cover;
         }
+      }
+    }
+
+    .Home-page-preset-link-images {
+      a {
+        margin-right: 20px;
       }
     }
   }
