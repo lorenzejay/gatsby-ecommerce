@@ -55,9 +55,8 @@
     }
 
     .Home-page-preset-link-images {
-      a {
-        margin-right: 20px;
-      }
+      justify-content: space-between;
+      gap: 20px;
     }
   }
 }
