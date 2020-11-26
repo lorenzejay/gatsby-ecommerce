@@ -1,0 +1,33 @@
+.Contact {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .form-details {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    justify-content: flex-start;
+  }
+  input {
+    outline: none;
+    padding: 10px 15px;
+    margin: 2vh 0;
+  }
+  textarea {
+    padding: 10px 15px;
+    width: 100%;
+    outline: none;
+    min-height: 15vh;
+  }
+  button {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #faebd7;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    text-transform: uppercase;
+  }
+}
