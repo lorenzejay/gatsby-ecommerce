@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "../layouts";
 import "../style/Help.scss";
-import { Helmet } from "react-helmet";
 import { Link } from "gatsby";
 import SEO from "../components/seo";
 
@@ -14,7 +13,7 @@ export default function Help({ location }) {
         pathname={location.pathname}
       />
       <div className="help-page">
-        <h1>How to Download my Presets</h1>
+        <h1>How to Download Presets</h1>
         <div>
           <h4>How to Download for Lightroom (Desktop)</h4>
           <ol>

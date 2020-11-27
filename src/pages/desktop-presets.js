@@ -5,7 +5,6 @@ import BackgroundImage from "gatsby-background-image";
 import PresetCard from "../components/PresetCard";
 import { HomeImageText } from "../style/MainBackground";
 import "../style/Presets.scss";
-import { Helmet } from "react-helmet";
 import SEO from "../components/seo";
 
 export default function DesktopPresets({ className, location }) {

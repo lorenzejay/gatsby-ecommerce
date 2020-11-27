@@ -15,6 +15,10 @@ const ProductTemplate = ({ pageContext }) => {
             title
             description
           }
+          mobileDetails {
+            title
+            description
+          }
         }
       }
     }

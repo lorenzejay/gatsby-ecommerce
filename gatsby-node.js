@@ -9,6 +9,7 @@ exports.createPages = ({ graphql, actions }) => {
           node {
             id
             name
+            isDesktopPreset
             price
             description
             slug
