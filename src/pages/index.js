@@ -99,7 +99,7 @@ export default function Home({ location }) {
           ))}
         </Carousel>
 
-        <HomeParagraphSpacing>
+        <div className="homepage-text">
           <h2>{homePageData.title}</h2>
           <p>{homePageText[0].body1}</p>
           <p>{homePageText[0].body2}</p>
@@ -107,7 +107,7 @@ export default function Home({ location }) {
           <p>{homePageText[0].body4}</p>
           <p>{homePageText[0].body5}</p>
           <p>{homePageText[0].body6}</p>
-        </HomeParagraphSpacing>
+        </div>
 
         <div className="Home-presets-links-container">
           <h2>Check out my presets here.</h2>
