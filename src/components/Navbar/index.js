@@ -27,8 +27,9 @@ const NavbarComponent = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
           <Link to="/presets">Presets</Link>
+          <Link to="/mobile-presets">Mobile</Link>
+          <Link to="/desktop-presets">Desktop</Link>
           <Link to="/help">Help</Link>
-          <Link to="/contact">Contact</Link>
         </Nav>
         <div className="shop-cart">
           <span className="snipcart-checkout" style={{ cursor: "pointer" }}>
@@ -38,30 +39,6 @@ const NavbarComponent = () => {
         </div>
       </Navbar.Collapse>
     </Navbar>
-    // <nav className="navbar">
-    //   <div>
-    //     <Link className="logo" to="/">
-    //       {data.site.siteMetadata.siteName}
-    //     </Link>
-    //   </div>
-    //   <ul className="navbar-links">
-    //     <li>
-    //       <Link to="/presets">Presets</Link>
-    //     </li>
-    //     <li>
-    //       <Link to="/help">Help</Link>
-    //     </li>
-    //     <li>
-    //       <Link to="/contact">Contact</Link>
-    //     </li>
-    //     <li>
-    //       <span className="snipcart-checkout" style={{ cursor: "pointer" }}>
-    //         <BiShoppingBag size="20" />
-    //       </span>
-    //       <span className="snipcart-items-count"></span>
-    //     </li>
-    //   </ul>
-    // </nav>
   );
 };
 

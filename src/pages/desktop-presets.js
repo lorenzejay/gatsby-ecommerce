@@ -7,20 +7,19 @@ import { HomeImageText } from "../style/MainBackground";
 import "../style/Presets.scss";
 import { Helmet } from "react-helmet";
 
-export default function MobilePresets({ className }) {
+export default function DesktopPresets({ className }) {
   const data = useStaticQuery(graphql`
     query {
-      allDatoCmsProduct(filter: { isDesktopPreset: { eq: false } }) {
+      allDatoCmsProduct(filter: { isDesktopPreset: { eq: true } }) {
         edges {
           node {
             id
             name
+            price
             fileGuid
             description
-            price
-            image {
-              url
-            }
+            slug
+            isDesktopPreset
             beforeAndAfters {
               before {
                 url
@@ -29,10 +28,16 @@ export default function MobilePresets({ className }) {
                 url
               }
             }
+            image {
+              url
+              sizes(maxWidth: 300, imgixParams: { fm: "jpg" }) {
+                ...GatsbyDatoCmsSizes
+              }
+            }
           }
         }
       }
-      desktop: file(relativePath: { eq: "cc1.JPG" }) {
+      desktop: file(relativePath: { eq: "cc4.jpg" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
@@ -48,7 +53,6 @@ export default function MobilePresets({ className }) {
   `);
 
   const imageData = data.desktop.childImageSharp.fluid;
-  console.log(data.allDatoCmsProduct.edges);
 
   return (
     <Layout>
@@ -66,7 +70,7 @@ export default function MobilePresets({ className }) {
           margin: 0,
         }}
       >
-        <HomeImageText>Mobile</HomeImageText>
+        <HomeImageText>Desktop</HomeImageText>
       </BackgroundImage>
       <div className="Catalogue">
         {data.allDatoCmsProduct.edges.map(({ node: product }) => (
