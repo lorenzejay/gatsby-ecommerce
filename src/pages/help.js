@@ -18,15 +18,15 @@ export default function Help({ location }) {
         <div>
           <h4>How to Download for Lightroom (Desktop)</h4>
           <ol>
-            <li>Download the your preset. You should have recieved an .xmp file.</li>
+            <li>After purchasing, you should have recieved an .XMP file.</li>
+            <li>Open Lightroom Classic and import a photo you want to edit</li>
+            <li>Press “Develop” on the top right.</li>
+            <li>Once there, you should have a tab called “Presets” on right left side. </li>
+            <li>Press the plus button and then “Import Presets”</li>
+            <li>Click on the Preset files you just downloaded</li>
             <li>
-              Open Lightroom Classic and if you're on windows press on edit then Preferences, on
-              apple the Lighroom tab then presets.
+              You are good to go! now just click on my presets and adjust according to your photo :)
             </li>
-            <li>Choose the preset tab.</li>
-            <li>Drag and drop you the preset you downloaded into the Settings folder.</li>
-            <li>Restart Lightroom.</li>
-            <li>You should now have the presets on the Presets tab.</li>
           </ol>
           <p>
             Additional Resources to help you{" "}
