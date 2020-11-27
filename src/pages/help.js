@@ -33,10 +33,29 @@ export default function Help() {
 
         <div>
           <h4>How to Download for Lightroom (Mobile)</h4>
-          <ol></ol>
+          <ol>
+            <li>
+              After purchasing, you should have recieved a DNG file. Download the DNG file and save
+              it to your camera roll. (It may appear blank on your camera roll. This is not a
+              problem)
+            </li>
+            <li>Go to your Lightroom mobile app and import that file</li>
+            <li>Once its imported, you are almost done!</li>
+            <li>
+              On the top right corner, press the three dots and then "create preset" name it Charis
+              Presets- (whichever one you got)
+            </li>
+            <li>
+              Now you are set! Use my presets on any photo you like by just going to your user
+              presets and clicking on the one you purchased :)
+            </li>
+            <li>
+              You can also copy and paste the settings from the imported DNG file to your pictures{" "}
+            </li>
+          </ol>
 
           <hr />
-          <p>
+          <p style={{ marginTop: "10vh" }}>
             If you still need help, contact me
             <Link to="/contact"> here</Link>
           </p>
