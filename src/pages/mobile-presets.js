@@ -18,6 +18,7 @@ export default function MobilePresets({ className }) {
             fileGuid
             description
             price
+            slug
             image {
               url
             }
