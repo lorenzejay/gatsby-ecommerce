@@ -1,6 +1,6 @@
 .Catalogue {
   background-color: #ffffff;
-  min-height: 100vh;
+  min-height: 120vh;
   padding: 5%;
 }
 
@@ -18,8 +18,9 @@
 
 @media screen and (min-width: 900px) {
   .Catalogue {
-    padding: 5%;
+    margin-bottom: 10vh;
     display: grid;
+    gap: 40px;
     grid-template-columns: repeat(3, 1fr);
   }
 

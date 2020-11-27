@@ -2,7 +2,7 @@
   background-color: #fff;
   width: 25vw;
   height: 45vh;
-  margin: 5%;
+  margin: 35px 10px;
   transition: 0.5s ease-in;
   position: relative;
   // &:hover {
@@ -10,6 +10,7 @@
   // }
   a {
     height: 100%;
+    color: #333333;
   }
   img {
     object-fit: cover;
@@ -18,16 +19,17 @@
     display: block;
   }
   .preset-card-container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: 0.5s ease;
-    background-color: #faebd7;
+    padding: 2%;
+    // position: absolute;
+    // top: 0;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    // height: 100%;
+    // width: 100%;
+    // opacity: 0;
+    // transition: 0.5s ease;
+    // background-color: #faebd7;
 
     // margin-bottom: 3vh;
 
@@ -49,12 +51,10 @@
     }
     .preset-card-price-addcart {
       display: flex;
-      flex-direction: column;
-      height: 50%;
-      align-items: center;
+      align-items: flex-start;
       padding: 0 2%;
       justify-content: space-between;
-      margin-top: 2vh;
+
       p {
         margin: auto 0;
         font-size: 1rem;
@@ -65,7 +65,7 @@
       button {
         padding: 5px 15px;
         font-size: 20px;
-        width: 20vw;
+        width: 15vw;
         min-height: 3vh;
         background-color: #fff;
         border-radius: 15px;
@@ -86,19 +86,22 @@
     }
 
     .preset-card-text {
-      color: #333333;
-      font-size: 20px;
-      position: absolute;
-      top: 35%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      text-align: center;
       display: flex;
-      align-items: center;
       flex-direction: column;
-      height: auto;
+      align-items: flex-start;
+      //   color: #333333;
+      //   font-size: 20px;
+      //   position: absolute;
+      //   top: 35%;
+      //   left: 50%;
+      //   -webkit-transform: translate(-50%, -50%);
+      //   -ms-transform: translate(-50%, -50%);
+      //   transform: translate(-50%, -50%);
+      //   text-align: center;
+      //   display: flex;
+      //   align-items: center;
+      //   flex-direction: column;
+      //   height: auto;
     }
   }
 }
@@ -108,13 +111,8 @@
 }
 
 @media screen and (max-width: 600px) {
-  .preset-link-wrapper {
-    width: 25vw;
-    height: 45vh;
-  }
   .preset-card {
-    margin: 3vh auto;
-
+    margin: 2vh auto;
     width: 180px;
     height: 23vh;
 
@@ -126,13 +124,14 @@
       .preset-card-text {
         width: 100%;
         min-height: 50%;
+        align-items: flex-start;
         h3 {
           font-size: 20px;
           margin: 0;
         }
         .preset-card-price-addcart {
           width: 100%;
-          height: inherit;
+          height: auto;
           margin: 0 auto;
 
           button {
