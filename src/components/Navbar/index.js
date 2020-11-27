@@ -9,17 +9,17 @@ const NavbarComponent = () => {
     query {
       site {
         siteMetadata {
-          siteName
+          title
           author
         }
       }
     }
   `);
-  console.log(data);
+  console.log(data.site.siteMetadata.author);
   return (
     <Navbar bg="light" expand="sm">
       <Link to="/" className="logo">
-        Charis Cheung
+        {data.site.siteMetadata.author}
       </Link>
 
       <Navbar.Toggle aria-controls="basic-navbar-nav" />

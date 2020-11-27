@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../layouts";
 import "../style/Help.scss";
 import { Helmet } from "react-helmet";
+import { Link } from "gatsby";
 
 export default function Help() {
   return (
@@ -34,9 +35,10 @@ export default function Help() {
           <h4>How to Download for Lightroom (Mobile)</h4>
           <ol></ol>
 
-          <h4>If you need help</h4>
+          <hr />
           <p>
-            Send me an email <a href="mailto:charispeace7@gmail.com">here</a>
+            If you still need help, contact me
+            <Link to="/contact"> here</Link>
           </p>
         </div>
       </div>

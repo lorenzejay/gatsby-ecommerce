@@ -5,8 +5,12 @@ const path = require("path");
 
 module.exports = {
   siteMetadata: {
-    siteName: "Charis Cheung",
+    siteName: "Charis Cheung Presets",
     author: "Charis Cheung",
+    description:
+      "Welcome to my preset store. I created 4 unique presets that give the look my pictures create.",
+    siteUrl: "https://charispresets.com/",
+    keywords: ["Presets", "Photography", "Editorial", "Creative"],
   },
   plugins: [
     "gatsby-plugin-sass",

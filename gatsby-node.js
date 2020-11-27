@@ -21,21 +21,7 @@ exports.createPages = ({ graphql, actions }) => {
                 url
               }
             }
-            beforeAndAfter {
-              url
-            }
-            beforeAndAfter2 {
-              url
-            }
-            beforeAndAfter3 {
-              url
-            }
-            beforeAndAfter4 {
-              url
-            }
-            beforeAndAfter5 {
-              url
-            }
+
             image {
               url
             }

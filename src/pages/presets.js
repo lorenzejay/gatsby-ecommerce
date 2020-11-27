@@ -20,8 +20,13 @@ export default function Presets({ className }) {
             description
             slug
             isDesktopPreset
-            beforeAndAfter {
-              url
+            beforeAndAfters {
+              before {
+                url
+              }
+              after {
+                url
+              }
             }
             image {
               url
@@ -41,7 +46,7 @@ export default function Presets({ className }) {
       }
       site {
         siteMetadata {
-          siteName
+          title
         }
       }
     }
