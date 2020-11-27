@@ -6,8 +6,9 @@ import HomeImageGrid from "../components/HomeImageGrid/index";
 import { Carousel } from "react-bootstrap";
 import "../style/Home.scss";
 import Img from "gatsby-image/withIEPolyfill";
+import SEO from "../components/seo";
 
-export default function Home({ className }) {
+export default function Home({ location }) {
   const data = useStaticQuery(graphql`
     query {
       allDatoCmsHomePage {
@@ -74,19 +75,20 @@ export default function Home({ className }) {
     object-position: top;
   `;
 
-  console.log(data);
-  // const desktopPresetImage = data.desktopPreset.childImageSharp.fluid;
-  // const mobilePresetImage = data.mobilePreset.childImageSharp.fluid;
   const homePageData = data.allDatoCmsHomePage.edges[0].node;
   const homePageText = homePageData.homeText;
-  console.log(homePageData.homeScreenHeaderImages);
 
   return (
     <Layout>
+      <SEO
+        title="Home"
+        description="Home of my Lightroom Preset Shop. Includes a 4 of my special presets."
+        pathname={location.pathname}
+      />
       <div className="home-page">
         <Carousel>
           {homePageData.homeScreenHeaderImages.map((item, i) => (
-            <Carousel.Item>
+            <Carousel.Item key={i}>
               <CarouselImage src={item.url} />
               <Carousel.Caption>
                 <Link to="/presets">

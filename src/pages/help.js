@@ -3,11 +3,16 @@ import Layout from "../layouts";
 import "../style/Help.scss";
 import { Helmet } from "react-helmet";
 import { Link } from "gatsby";
+import SEO from "../components/seo";
 
-export default function Help() {
+export default function Help({ location }) {
   return (
     <Layout>
-      <Helmet title="Help" />
+      <SEO
+        title="Help"
+        description="Resources on how to download my presets for Adobe Lightoom Mobile and Lightroom CC."
+        pathname={location.pathname}
+      />
       <div className="help-page">
         <h1>How to Download my Presets</h1>
         <div>

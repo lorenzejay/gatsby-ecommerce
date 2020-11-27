@@ -6,8 +6,9 @@ import PresetCard from "../components/PresetCard";
 import { HomeImageText } from "../style/MainBackground";
 import "../style/Presets.scss";
 import { Helmet } from "react-helmet";
+import SEO from "../components/seo";
 
-export default function Presets({ className }) {
+export default function Presets({ className, location }) {
   const data = useStaticQuery(graphql`
     query {
       allDatoCmsProduct {
@@ -55,7 +56,12 @@ export default function Presets({ className }) {
   const imageData = data.desktop.childImageSharp.fluid;
   return (
     <Layout>
-      <Helmet title="Presets" />
+      <SEO
+        title="All Presets"
+        description="4 Presets for both Mobile and Desktop. Also includes a preset pack for all of my presets. Works for Adobe Lightroom Mobile and Desktop applications."
+        pathname={location.pathname}
+      />
+
       <BackgroundImage
         tag="section"
         fluid={imageData}

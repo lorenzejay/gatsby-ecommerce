@@ -6,8 +6,9 @@ import PresetCard from "../components/PresetCard";
 import { HomeImageText } from "../style/MainBackground";
 import "../style/Presets.scss";
 import { Helmet } from "react-helmet";
+import SEO from "../components/seo";
 
-export default function MobilePresets({ className }) {
+export default function MobilePresets({ className, location }) {
   const data = useStaticQuery(graphql`
     query {
       allDatoCmsProduct(filter: { isDesktopPreset: { eq: false } }) {
@@ -49,11 +50,16 @@ export default function MobilePresets({ className }) {
   `);
 
   const imageData = data.desktop.childImageSharp.fluid;
-  console.log(data.allDatoCmsProduct.edges);
+  // console.log(data.allDatoCmsProduct.edges);
 
   return (
     <Layout>
-      <Helmet title="Presets" />
+      <SEO
+        title="Mobile Presets"
+        description="Home of my Adobe Lightroom Preset Shop. Includes a 4 of my special presets for the mobile version of Adobe Lightroom."
+        pathname={location.pathname}
+      />
+
       <BackgroundImage
         tag="section"
         fluid={imageData}

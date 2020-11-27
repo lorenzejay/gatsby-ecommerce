@@ -5,7 +5,7 @@ const path = require("path");
 
 module.exports = {
   siteMetadata: {
-    siteName: "Charis Cheung Presets",
+    title: "Charis Presets",
     author: "Charis Cheung",
     description:
       "Welcome to my preset store. I created 4 unique presets that give the look my pictures create.",

@@ -6,8 +6,9 @@ import PresetCard from "../components/PresetCard";
 import { HomeImageText } from "../style/MainBackground";
 import "../style/Presets.scss";
 import { Helmet } from "react-helmet";
+import SEO from "../components/seo";
 
-export default function DesktopPresets({ className }) {
+export default function DesktopPresets({ className, location }) {
   const data = useStaticQuery(graphql`
     query {
       allDatoCmsProduct(filter: { isDesktopPreset: { eq: true } }) {
@@ -56,7 +57,12 @@ export default function DesktopPresets({ className }) {
 
   return (
     <Layout>
-      <Helmet title="Presets" />
+      <SEO
+        title="Desktop Preset"
+        description="Store for my Lightroom Presets. Includes a 4 of my special presets. These are specific for Adobe Lightroom CC."
+        pathname={location.pathname}
+      />
+
       <BackgroundImage
         tag="section"
         fluid={imageData}
