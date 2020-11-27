@@ -102,14 +102,14 @@ export default function Home({ location }) {
         <div className="Home-presets-links-container">
           <h2>Check out my presets here.</h2>
           <div className="Home-page-preset-link-images">
-            <Link to="/presets">
+            <Link to="/desktop-presets">
               <Img
                 fluid={data.desktopPreset.childImageSharp.fluid}
                 objectFit="cover"
                 style={{ width: 300 }}
               />
             </Link>
-            <Link to="/presets">
+            <Link to="/mobile-presets">
               <Img
                 fluid={data.mobilePreset.childImageSharp.fluid}
                 objectFit="cover"
