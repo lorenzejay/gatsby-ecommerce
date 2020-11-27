@@ -34,7 +34,7 @@ export default function MobilePresets({ className, location }) {
           }
         }
       }
-      desktop: file(relativePath: { eq: "cc1.JPG" }) {
+      desktop: file(relativePath: { eq: "cc4.jpg" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp

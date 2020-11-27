@@ -38,7 +38,7 @@ export default function DesktopPresets({ className, location }) {
           }
         }
       }
-      desktop: file(relativePath: { eq: "cc4.jpg" }) {
+      desktop: file(relativePath: { eq: "cc1.JPG" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
