@@ -59,16 +59,6 @@ export default function Home({ location }) {
     padding: 0 5%;
   `;
 
-  const HomeParagraphSpacing = styled.div`
-    padding: 5%;
-    font-size: 20px;
-    color: #333333;
-    width: 75%;
-
-    p {
-      margin: 20px 0;
-    }
-  `;
   const CarouselImage = styled.img`
     width: inherit;
     object-fit: cover;
