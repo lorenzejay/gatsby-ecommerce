@@ -25,7 +25,8 @@ const ProductTemplate = ({ pageContext }) => {
   `);
   const { preset } = pageContext;
   const desktopPresetDetails = data.allDatoCmsPresetDetail.nodes[0].desktopDetails;
-
+  const mobilePresetDetails = data.allDatoCmsPresetDetail.nodes[0].mobileDetails;
+  console.log(mobilePresetDetails);
   return (
     <Layout>
       <div className="preset-container">
@@ -72,12 +73,19 @@ const ProductTemplate = ({ pageContext }) => {
 
         <Link to="/presets">Back to all presets</Link>
         <div className="preset-disclaimer-wrapper">
-          {desktopPresetDetails.map((detail, i) => (
-            <div className="preset-disclaimer-content" key={i}>
-              <h4>{detail.title}</h4>
-              <p>{detail.description}</p>
-            </div>
-          ))}
+          {preset.isDesktopPreset
+            ? desktopPresetDetails.map((detail, i) => (
+                <div className="preset-disclaimer-content" key={i}>
+                  <h4>{detail.title}</h4>
+                  <p>{detail.description}</p>
+                </div>
+              ))
+            : mobilePresetDetails.map((detail, i) => (
+                <div className="preset-disclaimer-content" key={i}>
+                  <h4>{detail.title}</h4>
+                  <p>{detail.description}</p>
+                </div>
+              ))}
         </div>
       </div>
     </Layout>
