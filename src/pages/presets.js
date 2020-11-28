@@ -11,28 +11,26 @@ export default function Presets({ className, location }) {
   const data = useStaticQuery(graphql`
     query {
       allDatoCmsProduct {
-        edges {
-          node {
-            id
-            name
-            price
-            fileGuid
-            description
-            slug
-            isDesktopPreset
-            beforeAndAfters {
-              before {
-                url
-              }
-              after {
-                url
-              }
-            }
-            image {
+        nodes {
+          id
+          name
+          price
+          fileGuid
+          description
+          slug
+          isDesktopPreset
+          beforeAndAfters {
+            before {
               url
-              sizes(maxWidth: 300, imgixParams: { fm: "jpg" }) {
-                ...GatsbyDatoCmsSizes
-              }
+            }
+            after {
+              url
+            }
+          }
+          image {
+            url
+            sizes(maxWidth: 300, imgixParams: { fm: "jpg" }) {
+              ...GatsbyDatoCmsSizes
             }
           }
         }
@@ -53,6 +51,7 @@ export default function Presets({ className, location }) {
   `);
 
   const imageData = data.desktop.childImageSharp.fluid;
+  console.log(data.allDatoCmsProduct.nodes);
   return (
     <Layout>
       <SEO
@@ -77,7 +76,7 @@ export default function Presets({ className, location }) {
         <HomeImageText>Presets</HomeImageText>
       </BackgroundImage>
       <div className="Catalogue">
-        {data.allDatoCmsProduct.edges.map(({ node: product }) => (
+        {data.allDatoCmsProduct.nodes.reverse().map((product) => (
           <PresetCard
             description={product.description}
             key={product.id}
