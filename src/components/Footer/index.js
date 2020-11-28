@@ -6,7 +6,7 @@ import { AiOutlineInstagram } from "react-icons/ai";
 const Footer = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "charis.jpg" }) {
+      file(relativePath: { eq: "pp.jpg" }) {
         childImageSharp {
           fixed(height: 100, width: 100, quality: 90) {
             ...GatsbyImageSharpFixed
