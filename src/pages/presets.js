@@ -76,7 +76,7 @@ export default function Presets({ className, location }) {
         <HomeImageText>Presets</HomeImageText>
       </BackgroundImage>
       <div className="Catalogue">
-        {data.allDatoCmsProduct.nodes.reverse().map((product) => (
+        {data.allDatoCmsProduct.nodes.map((product) => (
           <PresetCard
             description={product.description}
             key={product.id}
