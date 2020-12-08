@@ -9,55 +9,60 @@ import { Link, graphql, useStaticQuery } from "gatsby";
 const ProductTemplate = ({ pageContext }) => {
   const data = useStaticQuery(graphql`
     query {
-      allDatoCmsPresetDetail {
-        nodes {
-          desktopDetails {
-            title
-            description
-          }
-          mobileDetails {
-            title
-            description
+      allContentJson {
+        edges {
+          node {
+            cPresets {
+              presetDetailsDesktop {
+                description
+                title
+              }
+              presetDetailsMobile {
+                description
+                title
+              }
+            }
           }
         }
       }
     }
   `);
-  const { preset } = pageContext;
-  const desktopPresetDetails = data.allDatoCmsPresetDetail.nodes[0].desktopDetails;
-  const mobilePresetDetails = data.allDatoCmsPresetDetail.nodes[0].mobileDetails;
-  console.log(mobilePresetDetails);
+  const desktopDetails = data.allContentJson.edges[0].node.cPresets.presetDetailsDesktop;
+  const mobileDetails = data.allContentJson.edges[0].node.cPresets.presetDetailsMobile;
+  // const desktopPresetDetails = data.allDatoCmsPresetDetail.nodes[0].desktopDetails;
+  // const mobilePresetDetails = data.allDatoCmsPresetDetail.nodes[0].mobileDetails;
+  console.log(pageContext);
   return (
     <Layout>
       <div className="preset-container">
         <div className="preset-container-title">
           <h1>
-            {preset.name} - <span>${preset.price}</span>
+            {pageContext.name} - <span>${pageContext.price}</span>
           </h1>
           <div>
-            <p>{preset.description}</p>
+            <div dangerouslySetInnerHTML={{ __html: pageContext.description }} />
           </div>
           <button
             className="snipcart-add-item"
-            data-item-id={preset.id}
-            data-item-price={preset.price}
-            data-item-url={`https://charispresets.com/presets/${preset.slug}`}
-            data-item-description={preset.description}
-            data-item-name={preset.name}
-            data-item-image={preset.image.url}
-            data-item-file-guid={preset.fileGuid}
+            data-item-id={pageContext.id}
+            data-item-price={pageContext.price}
+            data-item-url={`https://charispresets.com/presets/${pageContext.slug}`}
+            data-item-description={pageContext.description}
+            data-item-name={pageContext.name}
+            data-item-image={pageContext.mainImage}
+            data-item-file-guid={pageContext.guid}
           >
             <p>Add to cart</p>
           </button>
         </div>
 
         <Carousel>
-          {preset.beforeAndAfters.map((item, i) => (
-            <Carousel.Item>
+          {pageContext.beforeAndAfters.map((item, i) => (
+            <Carousel.Item key={i}>
               <ReactCompareImage
                 className="preset-compare"
-                leftImage={item.before.url}
-                rightImage={item.after.url}
+                leftImage={item.before}
+                rightImage={item.after}
                 leftImageCss={{
                   objectFit: "contain",
                   objectPosition: "center",
@@ -73,17 +78,17 @@ const ProductTemplate = ({ pageContext }) => {
 
         <Link to="/presets">Back to all presets</Link>
         <div className="preset-disclaimer-wrapper">
-          {preset.isDesktopPreset
-            ? desktopPresetDetails.map((detail, i) => (
+          {pageContext.desktopPreset
+            ? desktopDetails.map((detail, i) => (
                 <div className="preset-disclaimer-content" key={i}>
-                  <h4>{detail.title}</h4>
-                  <p>{detail.description}</p>
+                  <div dangerouslySetInnerHTML={{ __html: detail.title }} />
+                  <div dangerouslySetInnerHTML={{ __html: detail.description }} />
                 </div>
               ))
-            : mobilePresetDetails.map((detail, i) => (
+            : mobileDetails.map((detail, i) => (
                 <div className="preset-disclaimer-content" key={i}>
-                  <h4>{detail.title}</h4>
-                  <p>{detail.description}</p>
+                  <div dangerouslySetInnerHTML={{ __html: detail.title }} />
+                  <div dangerouslySetInnerHTML={{ __html: detail.description }} />
                 </div>
               ))}
         </div>

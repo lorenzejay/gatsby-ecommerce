@@ -1,0 +1,227 @@
+{
+  "cPresets": {
+    "_id": 1,
+    "presets": [
+      {
+        "id": 1,
+        "name": "Honey - DeskTop Preset",
+        "price": 15,
+        "guid": "1111",
+        "description": "<p>HONEY is my most essential and practical preset. This preset can be used on everything whether it be indoors or outdoors. With punchy whites, vibrant colors, and natural undertones, this is my go to preset for a clean and naturally edited look.</p>",
+        "mainImage": "/images/desktopPreset.jpeg",
+        "slug": "honey",
+        "desktopPreset": true,
+        "beforeAndAfters": [
+          {
+            "before": "/images/HoneyBefore2.JPG",
+            "after": "/images/HoneyAfter2.JPG"
+          },
+          {
+            "before": "/images/HoneyBefore2.JPG",
+            "after": "/images/HoneyAfter2.JPG"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Honey - Mobile Preset",
+        "price": 10,
+        "guid": "222222",
+        "description": "<p>HONEY is my most essential and practical preset. This preset can be used on everything whether it be indoors or outdoors. With punchy whites, vibrant colors, and natural undertones, this is my go to preset for a clean and naturally edited look.</p>",
+        "mainImage": "/images/desktopPreset.jpeg",
+        "slug": "honey-mobile-preset",
+        "desktopPreset": false,
+        "beforeAndAfters": [
+          {
+            "before": "/images/HoneyBefore2.JPG",
+            "after": "/images/HoneyAfter2.JPG"
+          },
+          {
+            "before": "/images/HoneyBefore2.JPG",
+            "after": "/images/HoneyAfter2.JPG"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Mellow - Desktop Preset",
+        "price": 15,
+        "guid": "333333",
+        "description": "<p>MELLOW is my most used preset and is perfect for a moody fall look. With muted colors, warm tones, and milky whites, this preset leaves your photos with a vintage dreamy finish. It works best in natural and bright lighting!</p>",
+        "mainImage": "/images/desktopPreset.jpeg",
+        "slug": "mellow",
+        "desktopPreset": true,
+        "beforeAndAfters": [
+          {
+            "before": "/images/Mellow1Before.jpg",
+            "after": "/images/Mellow1After.jpg"
+          },
+          {
+            "before": "/images/Mellow2Before.JPG",
+            "after": "/images/Mellow2After.jpg"
+          },
+          {
+            "before": "/images/Mellow3Before.jpg",
+            "after": "/images/Mellow3After.jpg"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Mellow - Mobile Preset",
+        "price": 10,
+        "guid": "444444",
+        "description": "<p>MELLOW is my most used preset and is perfect for a moody fall look. With muted colors, warm tones, and milky whites, this preset leaves your photos with a vintage dreamy finish. It works best in natural and bright lighting!</p>",
+        "mainImage": "/images/desktopPreset.jpeg",
+        "slug": "mellow-mobile-preset",
+        "desktopPreset": false,
+        "beforeAndAfters": [
+          {
+            "before": "/images/Mellow3Before.jpg",
+            "after": "/images/Mellow3After.jpg"
+          },
+          {
+            "before": "/images/Mellow2Before.JPG",
+            "after": "/images/Mellow2After.jpg"
+          },
+          {
+            "before": "/images/Mellow1Before.jpg",
+            "after": "/images/Mellow1After.jpg"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Film - Desktop Preset",
+        "price": 15,
+        "guid": "555555",
+        "description": "<p>FILM is my favorite preset for an old vintage look. Featuring warm browns, vibrant colors and a touch of grain, this preset will make your digital photos look like the film you never have to buy! Works best with flash photos but also can work for an outdoor daytime look.</p>",
+        "mainImage": "/images/desktopPreset.jpeg",
+        "slug": "film",
+        "desktopPreset": true,
+        "beforeAndAfters": [
+          {
+            "before": "/images/Film1Before.jpg",
+            "after": "/images/Film1After.jpg"
+          },
+          {
+            "before": "/images/Film2Before.jpg",
+            "after": "/images/Film2After.jpg"
+          },
+          {
+            "before": "/images/Film3Before.JPG",
+            "after": "/images/Film3After.JPG"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Film - Mobile Preset",
+        "price": 10,
+        "guid": "6665",
+        "description": "<p>FILM is my favorite preset for an old vintage look. Featuring warm browns, vibrant colors and a touch of grain, this preset will make your digital photos look like the film you never have to buy! Works best with flash photos but also can work for an outdoor daytime look.</p>",
+        "mainImage": "/images/desktopPreset.jpeg",
+        "slug": "film-mobile-preset",
+        "desktopPreset": false,
+        "beforeAndAfters": [
+          {
+            "before": "/images/Film2Before.jpg",
+            "after": "/images/Film2After.jpg"
+          },
+          {
+            "before": "/images/Film1Before.jpg",
+            "after": "/images/Film1After.jpg"
+          },
+          {
+            "before": "/images/Film3Before.JPG",
+            "after": "/images/Film3After.JPG"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Classic - Desktop Preset",
+        "price": 15,
+        "guid": "6665",
+        "description": "<p>CLASSIC is the only black and white preset I like. Even though it seems like a simple preset to make, this one is made with the perfect balance between the highlights, shadows, blacks, and whites. A black and white preset is always essential to your preset kit.</p>",
+        "mainImage": "/images/desktopPreset.jpeg",
+        "slug": "classic",
+        "desktopPreset": true,
+        "beforeAndAfters": [
+          {
+            "before": "/images/Classic2Before.JPG",
+            "after": "/images/Classic2After.JPG"
+          },
+          {
+            "before": "/images/Classic3Before.JPG",
+            "after": "/images/Classic3After.JPG"
+          },
+          {
+            "before": "/images/Classic4Before.jpg",
+            "after": "/images/Classic4After.JPG"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Classic - Mobile Preset",
+        "price": 10,
+        "guid": "6665",
+        "description": "<p>CLASSIC is the only black and white preset I like. Even though it seems like a simple preset to make, this one is made with the perfect balance between the highlights, shadows, blacks, and whites. A black and white preset is always essential to your preset kit.</p>",
+        "mainImage": "/images/desktopPreset.jpeg",
+        "slug": "classic-mobile-preset",
+        "desktopPreset": false,
+        "beforeAndAfters": [
+          {
+            "before": "/images/Classic2Before.JPG",
+            "after": "/images/Classic2After.JPG"
+          },
+          {
+            "before": "/images/Classic3Before.JPG",
+            "after": "/images/Classic3After.JPG"
+          },
+          {
+            "before": "/images/Classic4Before.jpg",
+            "after": "/images/Classic4After.JPG"
+          }
+        ]
+      }
+    ],
+    "presetDetailsDesktop": [
+      {
+        "title": "<h4>DISCLAIMER</h4>",
+        "description": "<p>These presets are not meant to be a 'one click' preset where you apply it and you're done. Each and every photo is different depending on your camera settings. So, photos may need to be adjusted once applied.</p>"
+      },
+      {
+        "title": "<h4>COMPATIBLE WITH</h4>",
+        "description": "<p>Lightroom Classic CC and require an Adobe Subscription</p>"
+      },
+      {
+        "title": "<h4>FILE TYPE</h4>",
+        "description": "<p>Lightroom Desktop- These preset files are.XMP. To use, you must have Lightroom Classic CC v7.3.1 or newer. If you are unable to upload these to Lightroom, you need to update it.</p>"
+      },
+      {
+        "title": "<h4>POLICY</h4>",
+        "description": "<p>All sales are final, digital products are not available for return or refund. Please make sure your Lightroom CC and Lightroom Mobile are optimized and up to date before purchase. Any unauthorized distribution of charischeungpresets is prohited and will be met with legal action.</p>"
+      }
+    ],
+    "presetDetailsMobile": [
+      {
+        "title": "<h4>DISCLAIMER</h4>",
+        "description": "<p>These presets are not meant to be a 'one click' preset where you apply it and you're done. Each and every photo is different depending on your camera settings. So, photos may need to be adjusted once applied.</p>"
+      },
+      {
+        "title": "<h4>COMPATIBLE WITH</h4>",
+        "description": "<p>Lightroom Mobile App</p>"
+      },
+      {
+        "title": "<h4>FILE TYPE</h4>",
+        "description": "<p>These preset files are DNG. These will work for the Lightroom Mobile app regardless of the update.</p>"
+      },
+      {
+        "title": "<h4>POLICY</h4>",
+        "description": "<p>All sales are final, digital products are not available for return or refund. Please make sure your Lightroom CC and Lightroom Mobile are optimized and up to date before purchase. Any unauthorized distribution of charischeungpresets is prohited and will be met with legal action.</p>"
+      }
+    ]
+  }
+}
