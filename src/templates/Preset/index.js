@@ -39,7 +39,7 @@ const ProductTemplate = ({ pageContext }) => {
           <h1>
             {pageContext.name} - <span>${pageContext.price}</span>
           </h1>
-          <div>
+          <div className="preset-description">
             <div dangerouslySetInnerHTML={{ __html: pageContext.description }} />
           </div>
           <button
@@ -64,11 +64,11 @@ const ProductTemplate = ({ pageContext }) => {
                 leftImage={item.before}
                 rightImage={item.after}
                 leftImageCss={{
-                  objectFit: "contain",
+                  objectFit: "cover",
                   objectPosition: "center",
                 }}
                 rightImageCss={{
-                  objectFit: "contain",
+                  objectFit: "cover",
                   objectPosition: "center",
                 }}
               />

@@ -8,7 +8,7 @@
         "price": 15,
         "guid": "1111",
         "description": "<p>HONEY is my most essential and practical preset. This preset can be used on everything whether it be indoors or outdoors. With punchy whites, vibrant colors, and natural undertones, this is my go to preset for a clean and naturally edited look.</p>",
-        "mainImage": "/images/desktopPreset.jpeg",
+        "mainImage": "/images/HoneyMainDesktop.JPEG",
         "slug": "honey",
         "desktopPreset": true,
         "beforeAndAfters": [
@@ -28,13 +28,13 @@
         "price": 10,
         "guid": "222222",
         "description": "<p>HONEY is my most essential and practical preset. This preset can be used on everything whether it be indoors or outdoors. With punchy whites, vibrant colors, and natural undertones, this is my go to preset for a clean and naturally edited look.</p>",
-        "mainImage": "/images/desktopPreset.jpeg",
+        "mainImage": "/images/HoneyMainMobile.JPEG",
         "slug": "honey-mobile-preset",
         "desktopPreset": false,
         "beforeAndAfters": [
           {
-            "before": "/images/HoneyBefore2.JPG",
-            "after": "/images/HoneyAfter2.JPG"
+            "before": "/images/HoneyBefore1.jpg",
+            "after": "/images/HoneyAfter1.jpg"
           },
           {
             "before": "/images/HoneyBefore2.JPG",
@@ -48,7 +48,7 @@
         "price": 15,
         "guid": "333333",
         "description": "<p>MELLOW is my most used preset and is perfect for a moody fall look. With muted colors, warm tones, and milky whites, this preset leaves your photos with a vintage dreamy finish. It works best in natural and bright lighting!</p>",
-        "mainImage": "/images/desktopPreset.jpeg",
+        "mainImage": "/images/MellowMainDesktop.JPEG",
         "slug": "mellow",
         "desktopPreset": true,
         "beforeAndAfters": [
@@ -72,7 +72,7 @@
         "price": 10,
         "guid": "444444",
         "description": "<p>MELLOW is my most used preset and is perfect for a moody fall look. With muted colors, warm tones, and milky whites, this preset leaves your photos with a vintage dreamy finish. It works best in natural and bright lighting!</p>",
-        "mainImage": "/images/desktopPreset.jpeg",
+        "mainImage": "/images/MellowMainMobile.jpg",
         "slug": "mellow-mobile-preset",
         "desktopPreset": false,
         "beforeAndAfters": [
@@ -96,7 +96,7 @@
         "price": 15,
         "guid": "555555",
         "description": "<p>FILM is my favorite preset for an old vintage look. Featuring warm browns, vibrant colors and a touch of grain, this preset will make your digital photos look like the film you never have to buy! Works best with flash photos but also can work for an outdoor daytime look.</p>",
-        "mainImage": "/images/desktopPreset.jpeg",
+        "mainImage": "/images/FilmMainDesktop.JPEG",
         "slug": "film",
         "desktopPreset": true,
         "beforeAndAfters": [
@@ -107,6 +107,10 @@
           {
             "before": "/images/Film2Before.jpg",
             "after": "/images/Film2After.jpg"
+          },
+          {
+            "before": "/images/Film4Before.jpg",
+            "after": "/images/Film4After.JPG"
           },
           {
             "before": "/images/Film3Before.JPG",
@@ -120,7 +124,7 @@
         "price": 10,
         "guid": "6665",
         "description": "<p>FILM is my favorite preset for an old vintage look. Featuring warm browns, vibrant colors and a touch of grain, this preset will make your digital photos look like the film you never have to buy! Works best with flash photos but also can work for an outdoor daytime look.</p>",
-        "mainImage": "/images/desktopPreset.jpeg",
+        "mainImage": "/images/FilmMainMobile.JPEG",
         "slug": "film-mobile-preset",
         "desktopPreset": false,
         "beforeAndAfters": [
@@ -135,6 +139,10 @@
           {
             "before": "/images/Film3Before.JPG",
             "after": "/images/Film3After.JPG"
+          },
+          {
+            "before": "/images/Film4Before.jpg",
+            "after": "/images/Film4After.JPG"
           }
         ]
       },
@@ -144,7 +152,7 @@
         "price": 15,
         "guid": "6665",
         "description": "<p>CLASSIC is the only black and white preset I like. Even though it seems like a simple preset to make, this one is made with the perfect balance between the highlights, shadows, blacks, and whites. A black and white preset is always essential to your preset kit.</p>",
-        "mainImage": "/images/desktopPreset.jpeg",
+        "mainImage": "/images/ClassicMainDesktop.JPEG",
         "slug": "classic",
         "desktopPreset": true,
         "beforeAndAfters": [
@@ -168,7 +176,7 @@
         "price": 10,
         "guid": "6665",
         "description": "<p>CLASSIC is the only black and white preset I like. Even though it seems like a simple preset to make, this one is made with the perfect balance between the highlights, shadows, blacks, and whites. A black and white preset is always essential to your preset kit.</p>",
-        "mainImage": "/images/desktopPreset.jpeg",
+        "mainImage": "/images/ClassicMainMobile.JPEG",
         "slug": "classic-mobile-preset",
         "desktopPreset": false,
         "beforeAndAfters": [
@@ -183,6 +191,54 @@
           {
             "before": "/images/Classic4Before.jpg",
             "after": "/images/Classic4After.JPG"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "Essentials - Desktop Preset Pack",
+        "price": 50,
+        "guid": "3123",
+        "description": "<p>The ESSENTIALS Preset Pack contains all 4 of my favorite presets. This pack is very versatile from muted to punchy tones and soft to hard lightings.</p><br/> <ol> <li>Mellow - moody</li> <li>HONEY - clean</li> <li>FILM - Warm, film finish look</li> <li>Classic - soft, balanced black & white</li>  </ol><br/> <p>Save $10 by purchasing this pack rather than individually :)</p> ",
+        "mainImage": "/images/EssentialsMainMobile.jpg",
+        "slug": "essentials-preset-pack",
+        "desktopPreset": true,
+        "beforeAndAfters": [
+          {
+            "before": "/images/HoneyBefore2.JPG",
+            "after": "/images/EssentialAfter1.JPG"
+          },
+          {
+            "before": "/images/Film2Before.jpg",
+            "after": "/images/EssentialAfter2.JPG"
+          },
+          {
+            "before": "/images/Mellow2Before.JPG",
+            "after": "/images/EssentialAfter3.JPG"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "Essentials - Desktop Preset Pack",
+        "price": 35,
+        "guid": "3123",
+        "description": "<p>The ESSENTIALS Preset Pack contains all 4 of my favorite presets. This pack is very versatile from muted to punchy tones and soft to hard lightings.</p><br/> <ol> <li>Mellow - moody</li> <li>HONEY - clean</li> <li>FILM - Warm, film finish look</li> <li>Classic - soft, balanced black & white</li>  </ol><br/> <p>Save $10 by purchasing this pack rather than individually :)</p> ",
+        "mainImage": "/images/EssentialMainDesktop.JPEG",
+        "slug": "essentials-mobile-preset-pack",
+        "desktopPreset": true,
+        "beforeAndAfters": [
+          {
+            "before": "/images/HoneyBefore2.JPG",
+            "after": "/images/EssentialAfter1.JPG"
+          },
+          {
+            "before": "/images/Mellow2Before.jpg",
+            "after": "/images/EssentialAfter2.JPG"
+          },
+          {
+            "before": "/images/Film2Before.JPG",
+            "after": "/images/EssentialAfter3.JPG"
           }
         ]
       }
