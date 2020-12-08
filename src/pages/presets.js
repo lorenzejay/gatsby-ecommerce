@@ -10,27 +10,20 @@ import SEO from "../components/seo";
 export default function Presets({ className, location }) {
   const data = useStaticQuery(graphql`
     query {
-      allDatoCmsProduct {
-        nodes {
-          id
-          name
-          price
-          fileGuid
-          description
-          slug
-          isDesktopPreset
-          beforeAndAfters {
-            before {
-              url
-            }
-            after {
-              url
-            }
-          }
-          image {
-            url
-            sizes(maxWidth: 300, imgixParams: { fm: "jpg" }) {
-              ...GatsbyDatoCmsSizes
+      allContentJson {
+        edges {
+          node {
+            cPresets {
+              presets {
+                name
+                price
+                id
+                guid
+                desktopPreset
+                description
+                slug
+                mainImage
+              }
             }
           }
         }
@@ -51,7 +44,7 @@ export default function Presets({ className, location }) {
   `);
 
   const imageData = data.desktop.childImageSharp.fluid;
-  console.log(data.allDatoCmsProduct.nodes);
+  console.log(data.allContentJson.edges[0]);
   return (
     <Layout>
       <SEO
@@ -76,18 +69,18 @@ export default function Presets({ className, location }) {
         <HomeImageText>Presets</HomeImageText>
       </BackgroundImage>
       <div className="Catalogue">
-        {data.allDatoCmsProduct.nodes.map((product) => (
+        {data.allContentJson.edges[0].node.cPresets.presets.map((product) => (
           <PresetCard
             description={product.description}
             key={product.id}
             id={product.id}
             link={`/presets/${product.slug}`}
-            image={product.image.url}
+            image={product.mainImage}
             title={product.name}
             isDesktop={product.isDesktopPreset}
             price={product.price}
             slug={product.slug}
-            guid={product.fileGuid}
+            guid={product.guid}
           />
         ))}
       </div>

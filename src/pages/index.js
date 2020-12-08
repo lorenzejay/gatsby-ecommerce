@@ -52,10 +52,10 @@ export default function Home({ location }) {
   const HomePagePresetCardsContainer = styled.div`
     display: flex;
     align-items: center;
-    justify-content: space-around
-    gap: 5vw
-    width: 100vw
-    height: 35vh
+    justify-content: space-around;
+    gap: 5vw;
+    width: 100vw;
+    height: 35vh;
     padding: 0 5%;
   `;
 

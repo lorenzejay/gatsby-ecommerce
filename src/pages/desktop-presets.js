@@ -10,28 +10,19 @@ import SEO from "../components/seo";
 export default function DesktopPresets({ className, location }) {
   const data = useStaticQuery(graphql`
     query {
-      allDatoCmsProduct(filter: { isDesktopPreset: { eq: true } }) {
+      allContentJson {
         edges {
           node {
-            id
-            name
-            price
-            fileGuid
-            description
-            slug
-            isDesktopPreset
-            beforeAndAfters {
-              before {
-                url
-              }
-              after {
-                url
-              }
-            }
-            image {
-              url
-              sizes(maxWidth: 300, imgixParams: { fm: "jpg" }) {
-                ...GatsbyDatoCmsSizes
+            cPresets {
+              presets {
+                name
+                price
+                id
+                guid
+                desktopPreset
+                description
+                slug
+                mainImage
               }
             }
           }
@@ -53,6 +44,9 @@ export default function DesktopPresets({ className, location }) {
   `);
 
   const imageData = data.desktop.childImageSharp.fluid;
+  const desktopPresets = data.allContentJson.edges[0].node.cPresets.presets.filter(
+    (preset) => preset.desktopPreset
+  );
 
   return (
     <Layout>
@@ -78,18 +72,18 @@ export default function DesktopPresets({ className, location }) {
         <HomeImageText>Desktop</HomeImageText>
       </BackgroundImage>
       <div className="Catalogue">
-        {data.allDatoCmsProduct.edges.map(({ node: product }) => (
+        {desktopPresets.map((preset) => (
           <PresetCard
-            description={product.description}
-            key={product.id}
-            id={product.id}
-            link={`/presets/${product.slug}`}
-            image={product.image.url}
-            title={product.name}
-            isDesktop={product.isDesktopPreset}
-            price={product.price}
-            slug={product.slug}
-            guid={product.fileGuid}
+            description={preset.description}
+            key={preset.id}
+            id={preset.id}
+            link={`/presets/${preset.slug}`}
+            image={preset.mainImage}
+            title={preset.name}
+            isDesktop={preset.desktopPreset}
+            price={preset.price}
+            slug={preset.slug}
+            guid={preset.guid}
           />
         ))}
       </div>
