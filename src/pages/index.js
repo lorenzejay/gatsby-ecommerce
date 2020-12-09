@@ -23,7 +23,7 @@ export default function Home({ location }) {
           }
         }
       }
-      bg1: file(relativePath: { eq: "mainbg1.jpg" }) {
+      bg1: file(relativePath: { eq: "bgMain1.JPG" }) {
         childImageSharp {
           fluid(quality: 60, maxWidth: 1920) {
             ...GatsbyImageSharpFluid
