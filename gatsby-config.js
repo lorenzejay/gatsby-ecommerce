@@ -26,16 +26,16 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: path.join(__dirname, `src`, `images`),
+        path: path.join(__dirname, `static`, `images`),
       },
     },
 
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-source-datocms`,
-      options: { apiToken: process.env.DATO_API_TOKEN },
-    },
+    // {
+    //   resolve: `gatsby-source-datocms`,
+    //   options: { apiToken: process.env.DATO_API_TOKEN },
+    // },
     {
       resolve: "gatsby-plugin-snipcartv3",
       options: {

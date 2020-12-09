@@ -2,7 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import Layout from "../layouts/index";
 import styled from "@emotion/styled";
-import HomeImageGrid from "../components/HomeImageGrid/index";
+// import HomeImageGrid from "../components/HomeImageGrid/index";
 import { Carousel } from "react-bootstrap";
 import "../style/Home.scss";
 import Img from "gatsby-image/withIEPolyfill";
@@ -11,37 +11,49 @@ import SEO from "../components/seo";
 export default function Home({ location }) {
   const data = useStaticQuery(graphql`
     query {
-      allDatoCmsHomePage {
+      allContentJson {
         edges {
           node {
-            homeScreenGallery {
-              url
+            homePageContent {
+              description
             }
-            homeScreenHeaderImages {
-              url
+            homepageHeaderImages {
+              image
             }
-            title
-            homeText {
-              body1
-              body2
-              body3
-              body4
-              body5
-              body6
-            }
+          }
+        }
+      }
+      bg1: file(relativePath: { eq: "mainbg1.jpg" }) {
+        childImageSharp {
+          fluid(quality: 60, maxWidth: 1920) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      bg2: file(relativePath: { eq: "mainbg2.jpg" }) {
+        childImageSharp {
+          fluid(quality: 60, maxWidth: 1920) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      bg3: file(relativePath: { eq: "mainbg3.JPG" }) {
+        childImageSharp {
+          fluid(quality: 60, maxWidth: 1920) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       desktopPreset: file(relativePath: { eq: "desktopPreset.jpeg" }) {
         childImageSharp {
-          fluid(quality: 90, maxWidth: 300) {
+          fluid(quality: 60, maxWidth: 300) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       mobilePreset: file(relativePath: { eq: "mobilePreset.jpeg" }) {
         childImageSharp {
-          fluid(quality: 90, maxWidth: 300) {
+          fluid(quality: 60, maxWidth: 300) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -59,15 +71,13 @@ export default function Home({ location }) {
     padding: 0 5%;
   `;
 
-  const CarouselImage = styled.img`
+  const CarouselImage = styled(Img)`
+    height: inherit;
     width: inherit;
-    object-fit: cover;
-    object-position: top;
+    object-fit: contain;
   `;
 
-  const homePageData = data.allDatoCmsHomePage.edges[0].node;
-  const homePageText = homePageData.homeText;
-
+  console.log(data);
   return (
     <Layout>
       <SEO
@@ -77,26 +87,46 @@ export default function Home({ location }) {
       />
       <div className="home-page">
         <Carousel>
-          {homePageData.homeScreenHeaderImages.map((item, i) => (
-            <Carousel.Item key={i}>
-              <CarouselImage src={item.url} />
-              <Carousel.Caption>
-                <Link to="/presets">
-                  <button>Shop Now</button>
-                </Link>
-              </Carousel.Caption>
-            </Carousel.Item>
-          ))}
+          <Carousel.Item>
+            <CarouselImage
+              fluid={data.bg1.childImageSharp.fluid}
+              objectFit="cover"
+              objectPosition="center"
+            />
+            <Carousel.Caption>
+              <Link to="/presets">
+                <button>Shop Now</button>
+              </Link>
+            </Carousel.Caption>
+          </Carousel.Item>
+
+          <Carousel.Item>
+            <CarouselImage fluid={data.bg2.childImageSharp.fluid} objectFit="cover" />
+            <Carousel.Caption>
+              <Link to="/presets">
+                <button>Shop Now</button>
+              </Link>
+            </Carousel.Caption>
+          </Carousel.Item>
+
+          <Carousel.Item>
+            <CarouselImage
+              fluid={data.bg3.childImageSharp.fluid}
+              objectFit="cover"
+              objectPosition="top"
+            />
+            <Carousel.Caption>
+              <Link to="/presets">
+                <button>Shop Now</button>
+              </Link>
+            </Carousel.Caption>
+          </Carousel.Item>
         </Carousel>
 
         <div className="homepage-text">
-          <h2>{homePageData.title}</h2>
-          <p>{homePageText[0].body1}</p>
-          <p>{homePageText[0].body2}</p>
-          <p>{homePageText[0].body3}</p>
-          <p>{homePageText[0].body4}</p>
-          <p>{homePageText[0].body5}</p>
-          <p>{homePageText[0].body6}</p>
+          {data.allContentJson.edges[0].node.homePageContent.map((item, i) => (
+            <p key={i}>{item.description}</p>
+          ))}
         </div>
 
         <div className="Home-presets-links-container">
@@ -119,7 +149,7 @@ export default function Home({ location }) {
           </div>
         </div>
 
-        <HomePagePresetCardsContainer>
+        {/* <HomePagePresetCardsContainer>
           <HomeImageGrid>
             {data.allDatoCmsHomePage.edges[0].node.homeScreenGallery.map((item, i) => (
               <a href="https://www.instagram.com/charis.cheung/" key={i}>
@@ -127,7 +157,7 @@ export default function Home({ location }) {
               </a>
             ))}
           </HomeImageGrid>
-        </HomePagePresetCardsContainer>
+        </HomePagePresetCardsContainer> */}
       </div>
     </Layout>
   );

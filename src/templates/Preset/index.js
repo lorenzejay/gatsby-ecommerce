@@ -5,6 +5,7 @@ import ReactCompareImage from "react-compare-image";
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link, graphql, useStaticQuery } from "gatsby";
+import sanitizeHtml from "sanitize-html";
 
 const ProductTemplate = ({ pageContext }) => {
   const data = useStaticQuery(graphql`
@@ -81,14 +82,46 @@ const ProductTemplate = ({ pageContext }) => {
           {pageContext.desktopPreset
             ? desktopDetails.map((detail, i) => (
                 <div className="preset-disclaimer-content" key={i}>
-                  <div dangerouslySetInnerHTML={{ __html: detail.title }} />
-                  <div dangerouslySetInnerHTML={{ __html: detail.description }} />
+                  <span>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: sanitizeHtml(detail.title, {
+                          allowedTags: ["p", "h4", "h1", "span", "ol", "li"],
+                        }),
+                      }}
+                    />
+                  </span>
+                  <span>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: sanitizeHtml(detail.description, {
+                          allowedTags: ["p", "h4", "h1", "span", "ol", "li"],
+                        }),
+                      }}
+                    />
+                  </span>
                 </div>
               ))
             : mobileDetails.map((detail, i) => (
                 <div className="preset-disclaimer-content" key={i}>
-                  <div dangerouslySetInnerHTML={{ __html: detail.title }} />
-                  <div dangerouslySetInnerHTML={{ __html: detail.description }} />
+                  <span>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: sanitizeHtml(detail.title, {
+                          allowedTags: ["p", "h4", "h1", "span", "ol", "li"],
+                        }),
+                      }}
+                    />
+                  </span>
+                  <span>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: sanitizeHtml(detail.description, {
+                          allowedTags: ["p", "h4", "h1", "span", "ol", "li"],
+                        }),
+                      }}
+                    />
+                  </span>
                 </div>
               ))}
         </div>

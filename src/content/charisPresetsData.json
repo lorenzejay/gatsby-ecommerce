@@ -16,6 +16,17 @@
       "description": "Xoxo, Charis @charis.cheung"
     }
   ],
+  "homepageHeaderImages": [
+    {
+      "image": "/images/mainbg1.jpg"
+    },
+    {
+      "image": "/images/mainbg2.jpg"
+    },
+    {
+      "image": "/images/mainbg3.JPG"
+    }
+  ],
   "cPresets": {
     "_id": 2,
 
@@ -59,12 +70,20 @@
         "desktopPreset": false,
         "beforeAndAfters": [
           {
-            "before": "/images/HoneyBefore1.jpg",
-            "after": "/images/HoneyAfter1.jpg"
+            "before": "/images/Honey1Before.jpg",
+            "after": "/images/Honey1After.jpg"
           },
           {
             "before": "/images/HoneyBefore2.JPG",
             "after": "/images/HoneyAfter2.JPG"
+          },
+          {
+            "before": "/images/Honey3Before.jpg",
+            "after": "/images/Honey3After.jpg"
+          },
+          {
+            "before": "/images/Honey4Before.jpg",
+            "after": "/images/Honey4After.jpg"
           }
         ]
       },
@@ -219,6 +238,10 @@
         "slug": "classic-mobile-preset",
         "desktopPreset": false,
         "beforeAndAfters": [
+          {
+            "before": "/images/Classic1Before.jpg",
+            "after": "/images/Classic1After.jpg"
+          },
           {
             "before": "/images/Classic2Before.JPG",
             "after": "/images/Classic2After.JPG"
