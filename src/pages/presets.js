@@ -44,7 +44,7 @@ export default function Presets({ className, location }) {
   `);
 
   const imageData = data.desktop.childImageSharp.fluid;
-  console.log(data.allContentJson.edges[0]);
+  // console.log(data.allContentJson.edges[0]);
   return (
     <Layout>
       <SEO

@@ -77,7 +77,6 @@ export default function Home({ location }) {
     object-fit: contain;
   `;
 
-  console.log(data);
   return (
     <Layout>
       <SEO
