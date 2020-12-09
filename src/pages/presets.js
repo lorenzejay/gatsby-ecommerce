@@ -77,7 +77,7 @@ export default function Presets({ className, location }) {
             link={`/presets/${product.slug}`}
             image={product.mainImage}
             title={product.name}
-            isDesktop={product.isDesktopPreset}
+            isDesktop={product.desktopPresets}
             price={product.price}
             slug={product.slug}
             guid={product.guid}
