@@ -32,10 +32,6 @@ module.exports = {
 
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    // {
-    //   resolve: `gatsby-source-datocms`,
-    //   options: { apiToken: process.env.DATO_API_TOKEN },
-    // },
     {
       resolve: "gatsby-plugin-snipcartv3",
       options: {
