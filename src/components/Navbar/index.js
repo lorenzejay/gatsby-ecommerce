@@ -15,7 +15,7 @@ const NavbarComponent = () => {
       }
     }
   `);
-  console.log(data.site.siteMetadata.author);
+
   return (
     <Navbar bg="light" expand="sm">
       <Link to="/" className="logo">

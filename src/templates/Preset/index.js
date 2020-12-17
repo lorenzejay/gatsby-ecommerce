@@ -32,7 +32,7 @@ const ProductTemplate = ({ pageContext }) => {
   const mobileDetails = data.allContentJson.edges[0].node.cPresets.presetDetailsMobile;
   // const desktopPresetDetails = data.allDatoCmsPresetDetail.nodes[0].desktopDetails;
   // const mobilePresetDetails = data.allDatoCmsPresetDetail.nodes[0].mobileDetails;
-  console.log(pageContext);
+
   return (
     <Layout>
       <div className="preset-container">

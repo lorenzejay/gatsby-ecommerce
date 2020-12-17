@@ -61,15 +61,15 @@ export default function Home({ location }) {
     }
   `);
 
-  const HomePagePresetCardsContainer = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 5vw;
-    width: 100vw;
-    height: 35vh;
-    padding: 0 5%;
-  `;
+  // const HomePagePresetCardsContainer = styled.div`
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: space-around;
+  //   gap: 5vw;
+  //   width: 100vw;
+  //   height: 35vh;
+  //   padding: 0 5%;
+  // `;
 
   const CarouselImage = styled(Img)`
     height: inherit;

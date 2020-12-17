@@ -271,11 +271,11 @@
             "after": "/images/EssentialAfter1.JPG"
           },
           {
-            "before": "/images/Film2Before.jpg",
+            "before": "/images/Mellow2Before.JPG",
             "after": "/images/EssentialAfter2.JPG"
           },
           {
-            "before": "/images/Mellow2Before.JPG",
+            "before": "/images/essentialsbefore3.jpg",
             "after": "/images/EssentialAfter3.JPG"
           }
         ]
@@ -299,7 +299,7 @@
             "after": "/images/EssentialAfter2.JPG"
           },
           {
-            "before": "/images/Film2Before.JPG",
+            "before": "/images/essentialsbefore3.jpg",
             "after": "/images/EssentialAfter3.JPG"
           }
         ]
